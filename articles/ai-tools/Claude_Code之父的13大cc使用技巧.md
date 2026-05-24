@@ -1,0 +1,172 @@
+# Claude Code之父的13大cc使用技巧
+
+Claude Code之父的13大cc使用技巧 哥飞 在小说阅读器中沉浸阅读 Claude Code 使用技巧，分享给大家 花叔 . AI Native Coder：AppStore付费榜第一的「小猫补光灯」app开发者，这个账号主要关注AI、AI编程，也对互联网、商业以及更好的生活保有兴趣。
+
+一大早起来在X上看到Boris Cherny发了条长帖，分享他自己怎么用Claude Code的。
+
+感觉是我2026年看到最有价值的一条内容了。
+
+所以很想在这里也给大家完整分享下。
+
+Boris是Claude Code的创建者。
+
+2024年9月，他把Claude Code作为副项目做出来，没想到后来成了AI编程领域最火的工具之一。
+
+创建者亲自出来写使用技巧，这很难得。
+
+他是真的懂这个产品的优势和缺陷的，从他的视角肯定能获得一些不一样的启发。
+
+更让我有信心的是，他是真的在长期高频使用自己的产品。
+
+前段时间他发过一条推文：过去30天，我提交了259个PR——497次commit，新增4万行代码，删除3.8万行。
+
+每一行都是Claude Code + Opus 4.5写的。
+
+他还晒了自己的使用数据：47天里有46天都在用，最长连续使用42天，最长单次session跑了1天18小时50分钟，总共消耗了3.25亿tokens。
+
+看到创建者本人是这么用自己产品的，确实让人对cc更有信心。
+
+毕竟很多产品的创始人自己都不怎么用自己做的东西。
+
+回到这次的13条技巧。
+
+Boris在推文开头说：我的配置可能出乎意料地朴素！
+
+Claude Code开箱即用就很好，所以我个人并没有太多自定义。
+
+仔细看完13条建议，确实不是什么神秘hack，但出奇的实用，给我带来不少启发，希望对你也是！
+
+1. 并行跑5个ClaudeBoris在终端里同时运行5个Claude Code实例，标签页编号1-5，用系统通知来知道哪个需要输入。
+
+这点我之前也提过，不过我更习惯在Cursor、Trae等IDE里开5-10个终端跑不同任务，相互没有干扰。
+
+因为我不只是用Claude Code写代码，还会让他写脚本、写文章之类的，所以用IDE看看cc跑的成果我觉得会更方便。
+
+但总之一次性开多个cc窗口，去多完成一些任务的思维我是完全认可的，Boris这个系统通知的思路也确实优雅。
+
+2. 本地+网页双线作战除了本地5个Claude，Boris还在claude.ai/code上同时跑5-10个。
+
+用&把本地会话交接到网页端，或者用--teleport在两边切换。
+
+这个我之前完全没用过。
+
+我一直只在终端用，没意识到他们网页端居然做得这么好了。
+
+我打算试试了，毕竟平时外出拿手机就能用网页去控制cc的产出，也真是一刻不耽误。
+
+https://claude.ai/code3. 全程用Opus 4.5 + 思考模式Boris说所有工作都用Opus 4.5，并开启思考模式。
+
+他的理由是：虽然Opus比Sonnet更大更慢，但因为你需要更少的引导，工具使用能力更强，最终几乎总是比用小模型更快。
+
+这点我完全认同，除了慢一点，以及费钱外，Opus 4.5真的没啥缺点。
+
+当然，「贵」这事也不算Claude的问题，是我的问题，我最近又把Claude Max给续订回来了。
+
+4. 团队共享CLAUDE.mdBoris团队共享同一个CLAUDE.md文件，check进git，整个团队每周都会贡献多次。
+
+关键机制：每当看到Claude做错了什么，就加到CLAUDE.md里，这样Claude下次就知道不要这么做了。
+
+这形成了一个飞轮：Claude犯错 → 记录 → Claude学会 → 犯更少的错。
+
+这个思路我完全认可。
+
+CLAUDE.md并不是一次性的文档，你应该里面不停更新，让cc的运行规则更符合你的要求。
+
+比如我的写作Agent的CLAUDE.md文档已经迭代了几十次...大版本号都更新到6.0了。
+
+5. Code Review时自动更新规则Boris在代码审查时，会在同事的PR上@.claude，让它把某条规则加到CLAUDE.md中。
+
+他们用Claude Code的GitHub Action来实现。
+
+设置：/install-github-action6. 大多数会话从Plan模式开始Boris说大多数会话都从Plan模式开始（按两次shift+tab）。
+
+流程是：先用Plan模式来回讨论直到满意计划，然后切换到自动接受编辑模式，Claude通常能一次完成。
+
+他强调：一个好的计划真的很重要！
+
+这点确实。
+
+直接让Claude开干，经常做到一半发现方向错了。
+
+7. 斜杠命令用于高频工作流Boris对每天重复做很多次的"内循环"工作流都用斜杠命令，放在.claude/commands/目录下。
+
+关键是：这不只是节省打字，还能让Claude自己也调用这些命令。
+
+比如Claude写代码时可以调用你定义的/review来自己检查。
+
+8. 用子代理自动化常见流程Boris用几个子代理：code-simplifier：Claude工作完成后简化代码verify-app：端到端测试的详细指令他把子代理看作自动化大多数PR都要做的工作流。
+
+但这里有个坑：不要搞一堆"专家子代理"（Python专家、前端专家），这会把上下文分割开，让主Claude无法整体推理。
+
+用子代理做"流程自动化"是对的，但不要用来做"专家分工"。
+
+9. PostToolUse钩子自动格式化他们用PostToolUse钩子来格式化Claude的代码。
+
+Claude通常开箱就能生成格式良好的代码，钩子处理最后10%，避免后续CI中的格式错误。
+
+这个思路可以推广：用钩子在关键检查点做验证，而不是限制每一步动作。
+
+10. 用/permissions预授权，而非跳过权限Boris说他不使用--dangerously-skip-permissions。
+
+他用/permissions预先允许已知安全的bash命令，大部分设置check进.claude/settings.json并与团队共享。
+
+哈哈，这点来说，我倒是更激进一些，我每次默认启动cc的时候都是允许所有命令自动运行的，至今没出过事。
+
+但是这个就看个人性格吧，看喜欢安全地慢慢确认，还是接受一些风险，但是要更自动化。
+
+11. Claude使用所有工具Boris让Claude Code帮他用各种工具：通过MCP服务器搜索和发Slack消息运行BigQuery查询回答分析问题从Sentry抓取错误日志确实，Claude Code的定位不只是"写代码的工具"。
+
+我之前用Claude Code + Chrome Devtools MCP做B站和YouTube的自动回复，让Claude Code翻译Paul Graham的100篇文章，都是把它当成通用Agent在用。
+
+12. 长任务的处理策略对于非常长的任务，Boris用三种方式：提示Claude完成后用后台代理验证用agent Stop钩子做验证使用ralph-wiggum插件（让Claude自动循环直到完成）ralph-wiggum这个名字来自《辛普森一家》的角色，核心是让Claude在完成后自动继续，直到真正达到目标。
+
+插件：https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-wiggum13. 最重要的建议：给Claude验证工作的方式Boris说这是从Claude Code获得最佳结果的最重要的事：给Claude一种验证工作的方式。
+
+如果Claude有这个反馈循环，最终结果的质量会提升2-3倍。
+
+他的做法是用Chrome扩展测试每一个改动：Claude打开浏览器，测试UI，迭代直到代码正常工作。
+
+验证在每个领域不同：可能是运行bash命令，或跑测试套件，或在浏览器/手机模拟器中测试。
+
+确保在这个环节投入精力。
+
+这点确实是最有价值的洞察。
+
+很多时候让Claude写完代码就完事了，没有给它验证的机会。
+
+但如果Claude能自己测试、自己发现问题、自己修复，质量会好很多。
+
+几点感受读完Boris的13条，有几个感受：基础功能用到极致比黑魔法更有效。
+
+Boris的配置确实朴素，没什么神秘hack。
+
+但他把Plan模式、CLAUDE.md、子代理、钩子这些基础功能用得很彻底。
+
+并行思维很重要。
+
+本地5个 + 网页端5-10个，这个并行规模超出我之前想象。
+
+我在Cursor里开5个终端跑Claude Code就觉得够多了，Boris直接翻倍。
+
+验证机制是关键。
+
+第13条是最重要的：给Claude验证的能力。
+
+写代码 → 测试 → 发现问题 → 修复 → 再测试，这个闭环形成了，输出质量就上去了。
+
+最后，Boris说：Claude Code团队的每个人使用方式都非常不同。
+
+没有一种"正确"的使用方式。
+
+这点我认同。
+
+这13条是他的用法，不一定适合每个人。
+
+但至少给了一个参考：创建者本人是这么用的。
+
+相关链接：Boris的原文推文：https://x.com/bcherny/status/2007179832300581177Chrome扩展文档：https://code.claude.com/docs/en/chromeRalph Wiggum插件：https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-wiggum本文首发于我的知识星球「AI编程：从入门到精通」，转载请注明来源：https://t.zsxq.com/BFTPI
+
+---
+
+> 来源：哥飞公众号
+> 原始文件：Claude_Code之父的13大cc使用技巧.txt
