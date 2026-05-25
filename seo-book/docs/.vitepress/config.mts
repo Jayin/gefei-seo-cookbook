@@ -39,6 +39,8 @@ export default defineConfig({
             { text: '程序化 SEO', link: '/advanced/programmatic-seo' },
             { text: '多语言 SEO', link: '/advanced/multilingual-seo' },
             { text: '网站架构优化', link: '/advanced/site-architecture' },
+            { text: 'AI 搜索优化', link: '/advanced/ai-seo' },
+            { text: '惩罚恢复指南', link: '/advanced/penalty-recovery' },
             { text: 'SEO 数据分析', link: '/advanced/seo-analytics' }
           ]
         }
