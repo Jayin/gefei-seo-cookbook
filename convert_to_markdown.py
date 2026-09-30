@@ -125,7 +125,7 @@ def convert_to_markdown(content, filename):
 
 def process_all():
     """处理所有文件"""
-    input_dir = Path('/Users/jayinton/projects/my_research/gefei_seo/articles')
+    input_dir = Path(__file__).resolve().parent / 'articles'
 
     # 统计
     total = 0

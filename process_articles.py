@@ -240,8 +240,9 @@ def remove_marketing(content):
 
 
 def process_all():
-    input_dir = Path('/Users/jayinton/projects/my_research/gefei_seo/gefei_offical_article')
-    output_dir = Path('/Users/jayinton/projects/my_research/gefei_seo/articles')
+    root = Path(__file__).resolve().parent
+    input_dir = root / 'gefei_offical_article'
+    output_dir = root / 'articles'
 
     # 清空并重建
     if output_dir.exists():
