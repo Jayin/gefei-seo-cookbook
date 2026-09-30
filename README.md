@@ -72,6 +72,13 @@ npm run preview  # 预览构建结果
 
 需要 Node.js >= 16、npm >= 7。站点自身的说明见 [`seo-book/README.md`](seo-book/README.md)。
 
-## 说明
+## 许可
 
-文章版权归原作者所有，本仓库仅作个人学习研究，不用于再分发。
+代码与教程站点采用 [MIT License](LICENSE)。
+
+本许可证只覆盖本仓库中的原创部分：
+
+- `process_articles.py`、`convert_to_markdown.py`
+- `seo-book/` 下的站点代码、配置和教程文档
+
+`gefei_offical_article/` 与 `articles/` 中的公众号文章版权归原作者所有，**不在 MIT 授权范围内**，不得再分发或声称获得了再授权。这些文本仅作学习研究引用。
