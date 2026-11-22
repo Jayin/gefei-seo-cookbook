@@ -37,7 +37,21 @@ gefei_seo/
 | `industry` | 行业观察 | 1 |
 | `policy` | 政策解读 | 0 |
 
-完整篇目见 [`articles/README.md`](articles/README.md)；原始文章顺序见 [`gefei_offical_article/README.md`](gefei_offical_article/README.md)。离线阅读可直接打开 [静态首页](seo-book/static/index.html)。
+完整篇目见 [`articles/README.md`](articles/README.md)；原始文章顺序见 [`gefei_offical_article/README.md`](gefei_offical_article/README.md)。
+
+## 离线阅读静态站点
+
+在文件管理器中打开 [`seo-book/static/index.html`](seo-book/static/index.html)，或将该文件拖入浏览器，即可阅读，无需安装依赖或启动本地服务器。首页按「入门基础 → 实用工具 → 进阶策略 → 案例练习」排列教程；页面下方还可进入哥飞文章分类索引和项目文档。
+
+静态页面通过相对路径互相链接。如果要复制到其他位置或分享离线副本，请复制整个 `seo-book/static/` 目录，不要只复制 `index.html`。
+
+修改 `seo-book/docs/` 中的教程或 `seo-book/` 下的项目文档后，可重新生成静态页面（首次运行需先安装依赖）：
+
+```bash
+cd seo-book
+npm install
+node scripts/build-static.mjs
+```
 
 ## 处理流程
 
@@ -57,7 +71,7 @@ python3 convert_to_markdown.py
 
 ## SEO 教程站点
 
-`seo-book/` 是一本从入门到进阶的 Google SEO 教程，用 VitePress 构建，目前 24 篇：
+`seo-book/` 是一本从入门到进阶的 Google SEO 教程，用 VitePress 构建，目前 23 篇：
 
 - `docs/guide/` — 入门：搜索引擎原理、排名因素、关键词研究、页面 SEO、技术 SEO
 - `docs/advanced/` — 进阶：外链、内容 SEO、程序化 SEO、多语言、网站架构、数据分析、AI SEO、惩罚恢复
