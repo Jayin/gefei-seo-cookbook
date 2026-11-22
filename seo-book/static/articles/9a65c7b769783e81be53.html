@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>052-DALL E 3 将于10月份发布 到时可在 ChatGPT Plus 和 API 上体验</title><link rel="stylesheet" href="../style.css"></head><body><header><nav><a href="./index.html#ai-tools">← AI工具和产品文章索引</a><a href="../learning-path.html">学习路线</a></nav></header><main><article><h1 id="_052-dall-e-3-将于10月份发布-到时可在-chatgpt-plus-和-api-上体验" tabindex="-1">052-DALL E 3 将于10月份发布 到时可在 ChatGPT Plus 和 API 上体验 <a class="header-anchor" href="#_052-dall-e-3-将于10月份发布-到时可在-chatgpt-plus-和-api-上体验" aria-label="Permalink to &quot;052-DALL E 3 将于10月份发布 到时可在 ChatGPT Plus 和 API 上体验&quot;">&ZeroWidthSpace;</a></h1>
+<p>DALL·E 3 将于10月份发布，到时可在 ChatGPT Plus 和 API 上体验 大家好，我是哥飞。</p>
+<p>今天哥飞给大家介绍 OpenAI 的文生图服务 DALL·E 的最新版本 DALL·E 3 。</p>
+<p>DALL·E 2是在 2022 年的 11 月 3 日对外发布API的，而 ChatGPT 是在 2022 年 11 月 30 日上线网页版的。</p>
+<p>我们大多数人了解 OpenAI 都是因为 ChatGPT 的爆火。</p>
+<p>2022 年 11 月 30 日相当于是AI世界的命运齿轮转动时刻。</p>
+<p>好我们回到 DALL·E 2 ，先介绍一下 DALL·E 2 有哪些能力。</p>
+<h2 id="一、dall·e-21" tabindex="-1">一、DALL·E 21. <a class="header-anchor" href="#一、dall·e-21" aria-label="Permalink to &quot;一、DALL·E 21.&quot;">&ZeroWidthSpace;</a></h2>
+<p>1、DALL·E 2 基本信息官网： <a href="https://openai.com/dall-e-2%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C%EF%BC%9A" target="_blank" rel="noreferrer">https://openai.com/dall-e-2在线体验：</a> <a href="https://labs.openai.com/%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D%EF%BC%9A" target="_blank" rel="noreferrer">https://labs.openai.com/模型介绍：</a> <a href="https://platform.openai.com/docs/models/dall-eAPI%E6%96%87%E6%A1%A3%EF%BC%9A" target="_blank" rel="noreferrer">https://platform.openai.com/docs/models/dall-eAPI文档：</a> <a href="https://platform.openai.com/docs/api-reference/images1" target="_blank" rel="noreferrer">https://platform.openai.com/docs/api-reference/images1</a>.
+2、创建图像接口：<a href="https://api.openai.com/v1/images/generations%E8%83%BD%E5%8A%9B%EF%BC%9A%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%E4%B8%BB%E8%A6%81%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%9C%89%E4%B8%89%E4%B8%AA%EF%BC%8Cprompt%E6%98%AF%E7%94%BB%E5%9B%BE%E6%8F%90%E7%A4%BA%E8%AF%8D%EF%BC%8Cn%E6%98%AF%E4%B8%80%E6%AC%A1%E7%94%9F%E6%88%90%E7%9A%84%E5%9B%BE%E7%89%87%E6%95%B0%E9%87%8F%EF%BC%8Csize%E6%98%AF%E5%9B%BE%E5%83%8F%E5%A4%A7%E5%B0%8F%EF%BC%8C%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81256x" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/generations能力：文本生成图像主要请求参数有三个，prompt是画图提示词，n是一次生成的图片数量，size是图像大小，目前支持256x</a>
+256、512x512和1024x1024三种规格，也就是DALL·E 2只支持正方形图片：curl <a href="https://api.openai.com/v1/images/generations" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/generations</a> \ -H &quot;Content-Type: application/json&quot; \ -H &quot;Authorization: Bearer $OPENAI_API_KEY&quot; \ -d '{ &quot;prompt&quot;: &quot;A cute baby sea otter&quot;, &quot;n&quot;: 2, &quot;size&quot;: &quot;1024x1024&quot; }'返回数据中直接带了图片url数组：{ &quot;created&quot;: 1589478378, &quot;data&quot;: [ { &quot;url&quot;: &quot;https://...&quot; }, { &quot;url&quot;: &quot;https://...&quot; } ]}举例，提示词“An astronaut riding a horse in photorealistic style.” 生成的图像为：1.
+3、编辑修改图像接口：<a href="https://api.openai.com/v1/images/edits%E8%83%BD%E5%8A%9B%EF%BC%9A%E7%94%A8%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%AF%B9%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E5%83%8F%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E4%B8%BB%E8%A6%81%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%9C%89%E4%BA%94%E4%B8%AA%EF%BC%8C%E5%9C%A8%E5%88%9B%E5%BB%BA%E5%9B%BE%E7%89%87%E7%9A%84%E5%8F%82%E6%95%B0%E5%9F%BA%E7%A1%80%E4%B8%8A%E5%A2%9E%E5%8A%A0%E4%BA%86%E4%B8%A4%E4%B8%AA%EF%BC%8C%E4%B8%80%E4%B8%AA%E6%98%AF%E5%8E%9F%E5%9B%BE" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/edits能力：用提示词对上传的图像进行修改主要请求参数有五个，在创建图片的参数基础上增加了两个，一个是原图</a> image ，一个是遮罩 mask：curl <a href="https://api.openai.com/v1/images/edits" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/edits</a> \ -H &quot;Authorization: Bearer $OPENAI_API_KEY&quot; \ -F image=&quot;@otter.png&quot; \ -F mask=&quot;@mask.png&quot; \ -F prompt=&quot;A cute baby sea otter wearing a beret&quot; \ -F n=2 \ -F size=&quot;1024x1024&quot;原图必须是正方形的png图片，遮罩 mask 也是一张png图片，mask 尺寸必须跟原图 image 尺寸一致。</p>
+<p>mask 的透明区域就是模型会修改的区域，必须严格透明且支持不规则边界。</p>
+<ol>
+<li></li>
+</ol>
+<p>4、生成相似但有变化的图片接口：<a href="https://api.openai.com/v1/images/variations%E8%83%BD%E5%8A%9B%EF%BC%9A%E4%B8%8A%E4%BC%A0%E4%B8%80%E5%BC%A0%E5%9B%BE%EF%BC%8C%E7%94%9F%E6%88%90%E5%87%A0%E5%BC%A0%E7%9B%B8%E4%BC%BC%E4%BD%86%E6%9C%89%E5%8F%98%E5%8C%96%E7%9A%84%E5%9B%BE%E7%89%87%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0%E6%9C%893%E4%B8%AA%EF%BC%8Cimage" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/variations能力：上传一张图，生成几张相似但有变化的图片主要参数有3个，image</a> 是我们上传的原图，n是生成图片数量，size是图片尺寸：curl <a href="https://api.openai.com/v1/images/variations" target="_blank" rel="noreferrer">https://api.openai.com/v1/images/variations</a> \ -H &quot;Authorization: Bearer $OPENAI_API_KEY&quot; \ -F image=&quot;@otter.png&quot; \ -F n=2 \ -F size=&quot;1024x1024&quot;返回值跟生成图像一样。</p>
+<p>举例上传第一张图，生成后四张相似图片：1.
+5、扩图 Outpainting这个能力目前没有对外提供接口，不过可以在官网看到效果示例，下方上图是输入的图片，下图是扩出的图片。</p>
+<ol>
+<li></li>
+</ol>
+<p>6、修图 Inpainting这里哥飞不太清楚，是否跟1.3是同一个接口。</p>
+<p>举例，输入图像是下方左图，用提示词“Add a flamingo beside the pool.”得到了下方右图。</p>
+<p>好了，DALL·E 2 我们介绍完了，下面看看新发布的 DALL·E 3 有什么不一样。</p>
+<h2 id="二、dall·e-32" tabindex="-1">二、DALL·E 32. <a class="header-anchor" href="#二、dall·e-32" aria-label="Permalink to &quot;二、DALL·E 32.&quot;">&ZeroWidthSpace;</a></h2>
+<p>1、DALL·E 3 基本信息官网： <a href="https://openai.com/dall-e-32" target="_blank" rel="noreferrer">https://openai.com/dall-e-32</a>.
+2、DALL·E 3 细节控制支持通过 prompt 对图像每一处细节进行控制，如以下几句提示词，完全可以认为就是一段故事中的场景描述，拿来就能够生成合适的图片。</p>
+<p>The sidewalks bustling with pedestrians enjoying the nightlife.A bustling city street under the shine of a full moon.At the corner stall, a young woman with fieryred hair, dressed in a signature velvet cloak.s hagaling with the grumpv old vendor.The grumpy vendor, a tall, sophisticated man, is wearing a sharp suitsports a noteworthy moustache and is animatedly conversing on hissteamounk telephone.2.
+3、画面更精美即使是同一段提示词，相比于DALL·E 2，DALL·E 3画出的画面也会更精美。</p>
+<p>如提示词“An expressive oil painting of a basketball player dunking, depicted as an explosion of a nebula”，下方左图是DALL·E 2生成，右图是DALL·E 3 生成。</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>4、DALL·E 3 集成 ChatGPT 到时大家可以在 ChatGPT 中直接用对话来画图，哪里画得不满意，可以直接用自然语言和GPT沟通，让GPT去修改。</p>
+<p>以下是官网给出的一些示例。</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>5、创意掌控DALL·E 3将拒绝提供在世艺术家风格图像的生成请求，创作者也可以提交申请将自己的作品从模型训练数据集中删除。</p>
+<h2 id="三、为什么哥飞介绍这个" tabindex="-1">三、为什么哥飞介绍这个？ <a class="header-anchor" href="#三、为什么哥飞介绍这个" aria-label="Permalink to &quot;三、为什么哥飞介绍这个？&quot;">&ZeroWidthSpace;</a></h2>
+<p>哥飞是吃饱了撑的，来介绍这个吗？</p>
+<p>当然不是了。</p>
+<p>之前我们在这篇文章中说了《找新词：一个永远有效的建站策略，让你快速拿到搜索引擎流量》。</p>
+<p>那么今天哥飞就给你介绍了一个新词“DALL·E 3”，围绕着这个新词，你能去做什么呢？</p>
+<p>这是哥飞留给你的今日作业，欢迎在评论中留言写作业。</p>
+<p>你也可以加入</p>
+<hr>
+<blockquote>
+<p>来源：哥飞公众号
+原始文件：DALL_E_3_将于10月份发布_到时可在_ChatGPT_Plus_和_API_上体验.txt</p>
+</blockquote>
+</article><nav class="pagination" aria-label="文章导航"><a href="./index.html#ai-tools">返回文章分类</a><a href="../learning-path.html">返回学习路线</a></nav></main></body></html>

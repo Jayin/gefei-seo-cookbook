@@ -1,4 +1,4 @@
-# Google SEO 实战教程
+# 01-Google SEO 实战教程
 
 从零开始学习 Google SEO 优化，掌握搜索引擎优化的核心技巧。
 
@@ -22,6 +22,10 @@
 - **部署：** 静态站点
 
 ## 快速开始
+
+### 离线阅读
+
+直接打开 [静态首页](static/index.html)，即可浏览教程和 589 篇文章，无需启动服务器。Markdown 教程更新后，维护者可在安装项目依赖的环境中运行 `node scripts/build-static.mjs`，重新生成 `static/` 下的离线页面。
 
 ### 环境要求
 

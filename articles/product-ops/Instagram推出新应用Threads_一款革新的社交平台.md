@@ -1,4 +1,4 @@
-# Instagram推出新应用Threads 一款革新的社交平台
+# 10-Instagram推出新应用Threads 一款革新的社交平台
 
 Instagram推出新应用Threads：一款革新的社交平台 Instagram 近日推出了一款名为 Threads 的新应用，这是一款基于文本的对话应用，旨在让社区成员能够聚集在一起，讨论从今天关心的话题到明天的热门趋势等各种内容。
 

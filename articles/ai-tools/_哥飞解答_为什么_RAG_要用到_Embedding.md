@@ -1,4 +1,4 @@
-#  哥飞解答 为什么 RAG 要用到 Embedding
+# 030- 哥飞解答 为什么 RAG 要用到 Embedding
 
 【哥飞解答】为什么 RAG 要用到 Embedding 大家好，我是哥飞。
 

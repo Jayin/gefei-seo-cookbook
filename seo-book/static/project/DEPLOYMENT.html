@@ -1,0 +1,225 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>04-部署指南</title><link rel="stylesheet" href="../style.css"></head><body><header><nav><a href="./index.html">← 项目文档</a><a href="../learning-path.html">学习路线</a></nav></header><main><article><h1 id="_04-部署指南" tabindex="-1">04-部署指南 <a class="header-anchor" href="#_04-部署指南" aria-label="Permalink to &quot;04-部署指南&quot;">&ZeroWidthSpace;</a></h1>
+<p>本指南介绍如何部署 Google SEO 实战教程网站。</p>
+<h2 id="本地开发" tabindex="-1">本地开发 <a class="header-anchor" href="#本地开发" aria-label="Permalink to &quot;本地开发&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="启动开发服务器" tabindex="-1">启动开发服务器 <a class="header-anchor" href="#启动开发服务器" aria-label="Permalink to &quot;启动开发服务器&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> seo-book</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span></span></code></pre>
+</div><p>访问 <a href="http://localhost:5173" target="_blank" rel="noreferrer">http://localhost:5173</a> 查看效果。</p>
+<h3 id="构建生产版本" tabindex="-1">构建生产版本 <a class="header-anchor" href="#构建生产版本" aria-label="Permalink to &quot;构建生产版本&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div><p>构建完成后，静态文件会生成在 <code>docs/.vitepress/dist/</code> 目录。</p>
+<h3 id="预览生产版本" tabindex="-1">预览生产版本 <a class="header-anchor" href="#预览生产版本" aria-label="Permalink to &quot;预览生产版本&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> preview</span></span></code></pre>
+</div><p>访问 <a href="http://localhost:4173" target="_blank" rel="noreferrer">http://localhost:4173</a> 预览生产版本。</p>
+<h2 id="部署选项" tabindex="-1">部署选项 <a class="header-anchor" href="#部署选项" aria-label="Permalink to &quot;部署选项&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-github-pages" tabindex="-1">1. GitHub Pages <a class="header-anchor" href="#_1-github-pages" aria-label="Permalink to &quot;1. GitHub Pages&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="步骤-1-创建-github-仓库" tabindex="-1">步骤 1：创建 GitHub 仓库 <a class="header-anchor" href="#步骤-1-创建-github-仓库" aria-label="Permalink to &quot;步骤 1：创建 GitHub 仓库&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>在 GitHub 上创建新仓库</li>
+<li>将代码推送到仓库</li>
+</ol>
+<h4 id="步骤-2-配置-github-actions" tabindex="-1">步骤 2：配置 GitHub Actions <a class="header-anchor" href="#步骤-2-配置-github-actions" aria-label="Permalink to &quot;步骤 2：配置 GitHub Actions&quot;">&ZeroWidthSpace;</a></h4>
+<p>创建 <code>.github/workflows/deploy.yml</code> 文件：</p>
+<div class="language-yaml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Deploy</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  push</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    branches</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">jobs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  build-and-deploy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    runs-on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">ubuntu-latest</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    steps</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Checkout</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        uses</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">actions/checkout@v3</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Setup Node.js</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        uses</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">actions/setup-node@v3</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          node-version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">18</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Install dependencies</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        run</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">npm install</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Build</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        run</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">npm run build</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Deploy to GitHub Pages</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        uses</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">peaceiris/actions-gh-pages@v3</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          github_token</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          publish_dir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">docs/.vitepress/dist</span></span></code></pre>
+</div><h4 id="步骤-3-配置-github-pages" tabindex="-1">步骤 3：配置 GitHub Pages <a class="header-anchor" href="#步骤-3-配置-github-pages" aria-label="Permalink to &quot;步骤 3：配置 GitHub Pages&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>进入仓库设置</li>
+<li>找到 &quot;Pages&quot; 选项</li>
+<li>选择 &quot;Deploy from a branch&quot;</li>
+<li>选择 &quot;gh-pages&quot; 分支</li>
+<li>保存设置</li>
+</ol>
+<h3 id="_2-vercel" tabindex="-1">2. Vercel <a class="header-anchor" href="#_2-vercel" aria-label="Permalink to &quot;2. Vercel&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="步骤-1-连接仓库" tabindex="-1">步骤 1：连接仓库 <a class="header-anchor" href="#步骤-1-连接仓库" aria-label="Permalink to &quot;步骤 1：连接仓库&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>登录 Vercel</li>
+<li>点击 &quot;New Project&quot;</li>
+<li>连接 GitHub 仓库</li>
+</ol>
+<h4 id="步骤-2-配置项目" tabindex="-1">步骤 2：配置项目 <a class="header-anchor" href="#步骤-2-配置项目" aria-label="Permalink to &quot;步骤 2：配置项目&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li><strong>Framework Preset:</strong> VitePress</li>
+<li><strong>Build Command:</strong> <code>npm run build</code></li>
+<li><strong>Output Directory:</strong> <code>docs/.vitepress/dist</code></li>
+<li><strong>Install Command:</strong> <code>npm install</code></li>
+</ul>
+<h4 id="步骤-3-部署" tabindex="-1">步骤 3：部署 <a class="header-anchor" href="#步骤-3-部署" aria-label="Permalink to &quot;步骤 3：部署&quot;">&ZeroWidthSpace;</a></h4>
+<p>点击 &quot;Deploy&quot; 按钮完成部署。</p>
+<h3 id="_3-netlify" tabindex="-1">3. Netlify <a class="header-anchor" href="#_3-netlify" aria-label="Permalink to &quot;3. Netlify&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="步骤-1-连接仓库-1" tabindex="-1">步骤 1：连接仓库 <a class="header-anchor" href="#步骤-1-连接仓库-1" aria-label="Permalink to &quot;步骤 1：连接仓库&quot;">&ZeroWidthSpace;</a></h4>
+<ol>
+<li>登录 Netlify</li>
+<li>点击 &quot;New site from Git&quot;</li>
+<li>连接 GitHub 仓库</li>
+</ol>
+<h4 id="步骤-2-配置项目-1" tabindex="-1">步骤 2：配置项目 <a class="header-anchor" href="#步骤-2-配置项目-1" aria-label="Permalink to &quot;步骤 2：配置项目&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li><strong>Build command:</strong> <code>npm run build</code></li>
+<li><strong>Publish directory:</strong> <code>docs/.vitepress/dist</code></li>
+</ul>
+<h4 id="步骤-3-部署-1" tabindex="-1">步骤 3：部署 <a class="header-anchor" href="#步骤-3-部署-1" aria-label="Permalink to &quot;步骤 3：部署&quot;">&ZeroWidthSpace;</a></h4>
+<p>点击 &quot;Deploy site&quot; 按钮完成部署。</p>
+<h3 id="_4-静态文件托管" tabindex="-1">4. 静态文件托管 <a class="header-anchor" href="#_4-静态文件托管" aria-label="Permalink to &quot;4. 静态文件托管&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="步骤-1-构建项目" tabindex="-1">步骤 1：构建项目 <a class="header-anchor" href="#步骤-1-构建项目" aria-label="Permalink to &quot;步骤 1：构建项目&quot;">&ZeroWidthSpace;</a></h4>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div><h4 id="步骤-2-上传文件" tabindex="-1">步骤 2：上传文件 <a class="header-anchor" href="#步骤-2-上传文件" aria-label="Permalink to &quot;步骤 2：上传文件&quot;">&ZeroWidthSpace;</a></h4>
+<p>将 <code>docs/.vitepress/dist/</code> 目录中的所有文件上传到你的静态文件托管服务。</p>
+<p>常见的静态文件托管服务：</p>
+<ul>
+<li>AWS S3</li>
+<li>Google Cloud Storage</li>
+<li>Azure Blob Storage</li>
+<li>阿里云 OSS</li>
+<li>腾讯云 COS</li>
+</ul>
+<h3 id="_5-自托管" tabindex="-1">5. 自托管 <a class="header-anchor" href="#_5-自托管" aria-label="Permalink to &quot;5. 自托管&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="步骤-1-构建项目-1" tabindex="-1">步骤 1：构建项目 <a class="header-anchor" href="#步骤-1-构建项目-1" aria-label="Permalink to &quot;步骤 1：构建项目&quot;">&ZeroWidthSpace;</a></h4>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div><h4 id="步骤-2-配置-web-服务器" tabindex="-1">步骤 2：配置 Web 服务器 <a class="header-anchor" href="#步骤-2-配置-web-服务器" aria-label="Permalink to &quot;步骤 2：配置 Web 服务器&quot;">&ZeroWidthSpace;</a></h4>
+<p><strong>Nginx 配置示例：</strong></p>
+<div class="language-nginx vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">nginx</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">your-domain.com;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    root </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/path/to/seo-book/docs/.vitepress/dist;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    index </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">index.html;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try_files </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$uri $uri/ /index.html;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ~*</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF"> \.(js|css|png|jpg|jpeg|gif|ico|svg)$ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        expires </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">1y;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Cache-Control </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"public, immutable"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><strong>Apache 配置示例：</strong></p>
+<div class="language-apache vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">apache</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">VirtualHost</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> *:80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ServerName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> your-domain.com</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    DocumentRoot</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /path/to/seo-book/docs/.vitepress/dist</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Directory</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /path/to/seo-book/docs/.vitepress/dist</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        AllowOverride</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> All</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        Require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> all granted</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Directory</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">VirtualHost</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h2 id="自定义域名" tabindex="-1">自定义域名 <a class="header-anchor" href="#自定义域名" aria-label="Permalink to &quot;自定义域名&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="github-pages" tabindex="-1">GitHub Pages <a class="header-anchor" href="#github-pages" aria-label="Permalink to &quot;GitHub Pages&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>在仓库根目录创建 <code>CNAME</code> 文件</li>
+<li>在文件中写入你的域名</li>
+<li>在域名 DNS 设置中添加 CNAME 记录</li>
+</ol>
+<h3 id="vercel" tabindex="-1">Vercel <a class="header-anchor" href="#vercel" aria-label="Permalink to &quot;Vercel&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>进入项目设置</li>
+<li>找到 &quot;Domains&quot; 选项</li>
+<li>添加你的域名</li>
+<li>按照提示配置 DNS</li>
+</ol>
+<h3 id="netlify" tabindex="-1">Netlify <a class="header-anchor" href="#netlify" aria-label="Permalink to &quot;Netlify&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>进入站点设置</li>
+<li>找到 &quot;Domain management&quot; 选项</li>
+<li>添加你的域名</li>
+<li>按照提示配置 DNS</li>
+</ol>
+<h2 id="环境变量" tabindex="-1">环境变量 <a class="header-anchor" href="#环境变量" aria-label="Permalink to &quot;环境变量&quot;">&ZeroWidthSpace;</a></h2>
+<p>如果需要配置环境变量，可以在项目根目录创建 <code>.env</code> 文件：</p>
+<div class="language-env vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">env</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span># 网站标题</span></span>
+<span class="line"><span>VITE_TITLE=Google SEO 实战教程</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 网站描述</span></span>
+<span class="line"><span>VITE_DESCRIPTION=从零开始学习 Google SEO 优化</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 网站 URL</span></span>
+<span class="line"><span>VITE_SITE_URL=https://your-domain.com</span></span></code></pre>
+</div><h2 id="性能优化" tabindex="-1">性能优化 <a class="header-anchor" href="#性能优化" aria-label="Permalink to &quot;性能优化&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-启用-gzip-压缩" tabindex="-1">1. 启用 Gzip 压缩 <a class="header-anchor" href="#_1-启用-gzip-压缩" aria-label="Permalink to &quot;1. 启用 Gzip 压缩&quot;">&ZeroWidthSpace;</a></h3>
+<p>在 Web 服务器配置中启用 Gzip 压缩。</p>
+<h3 id="_2-配置缓存" tabindex="-1">2. 配置缓存 <a class="header-anchor" href="#_2-配置缓存" aria-label="Permalink to &quot;2. 配置缓存&quot;">&ZeroWidthSpace;</a></h3>
+<p>为静态资源配置长期缓存。</p>
+<h3 id="_3-使用-cdn" tabindex="-1">3. 使用 CDN <a class="header-anchor" href="#_3-使用-cdn" aria-label="Permalink to &quot;3. 使用 CDN&quot;">&ZeroWidthSpace;</a></h3>
+<p>使用 CDN 加速静态资源加载。</p>
+<h3 id="_4-优化图片" tabindex="-1">4. 优化图片 <a class="header-anchor" href="#_4-优化图片" aria-label="Permalink to &quot;4. 优化图片&quot;">&ZeroWidthSpace;</a></h3>
+<p>压缩图片，使用 WebP 格式。</p>
+<h2 id="监控和分析" tabindex="-1">监控和分析 <a class="header-anchor" href="#监控和分析" aria-label="Permalink to &quot;监控和分析&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-google-analytics" tabindex="-1">1. Google Analytics <a class="header-anchor" href="#_1-google-analytics" aria-label="Permalink to &quot;1. Google Analytics&quot;">&ZeroWidthSpace;</a></h3>
+<p>在 <code>docs/.vitepress/config.mts</code> 中添加 Google Analytics 代码：</p>
+<div class="language-typescript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">typescript</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">head</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'script'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, { async: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, src: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> }],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'script'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {}, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">`</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    window.dataLayer = window.dataLayer || [];</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    function gtag(){dataLayer.push(arguments);}</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    gtag('js', new Date());</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    gtag('config', 'GA_MEASUREMENT_ID');</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  `</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre>
+</div><h3 id="_2-google-search-console" tabindex="-1">2. Google Search Console <a class="header-anchor" href="#_2-google-search-console" aria-label="Permalink to &quot;2. Google Search Console&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>验证网站所有权</li>
+<li>提交 Sitemap</li>
+<li>监控索引状态</li>
+</ol>
+<h2 id="常见问题" tabindex="-1">常见问题 <a class="header-anchor" href="#常见问题" aria-label="Permalink to &quot;常见问题&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="q-部署后页面空白怎么办" tabindex="-1">Q: 部署后页面空白怎么办？ <a class="header-anchor" href="#q-部署后页面空白怎么办" aria-label="Permalink to &quot;Q: 部署后页面空白怎么办？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 检查 <code>base</code> 配置是否正确。如果部署在子目录，需要设置 <code>base</code>。</p>
+<h3 id="q-如何配置-base" tabindex="-1">Q: 如何配置 base？ <a class="header-anchor" href="#q-如何配置-base" aria-label="Permalink to &quot;Q: 如何配置 base？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 在 <code>docs/.vitepress/config.mts</code> 中添加：</p>
+<div class="language-typescript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">typescript</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> defineConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  base: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/seo-book/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 如果部署在子目录</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // ...</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><h3 id="q-如何添加自定义样式" tabindex="-1">Q: 如何添加自定义样式？ <a class="header-anchor" href="#q-如何添加自定义样式" aria-label="Permalink to &quot;Q: 如何添加自定义样式？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 在 <code>docs/.vitepress/theme/</code> 目录创建自定义主题。</p>
+<h3 id="q-如何添加自定义组件" tabindex="-1">Q: 如何添加自定义组件？ <a class="header-anchor" href="#q-如何添加自定义组件" aria-label="Permalink to &quot;Q: 如何添加自定义组件？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 在 <code>docs/.vitepress/theme/</code> 目录注册自定义组件。</p>
+<h2 id="更新和维护" tabindex="-1">更新和维护 <a class="header-anchor" href="#更新和维护" aria-label="Permalink to &quot;更新和维护&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="更新内容" tabindex="-1">更新内容 <a class="header-anchor" href="#更新内容" aria-label="Permalink to &quot;更新内容&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>修改 <code>docs/</code> 目录中的 Markdown 文件</li>
+<li>提交代码到仓库</li>
+<li>自动部署会更新网站</li>
+</ol>
+<h3 id="更新依赖" tabindex="-1">更新依赖 <a class="header-anchor" href="#更新依赖" aria-label="Permalink to &quot;更新依赖&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span></span></code></pre>
+</div><h3 id="备份" tabindex="-1">备份 <a class="header-anchor" href="#备份" aria-label="Permalink to &quot;备份&quot;">&ZeroWidthSpace;</a></h3>
+<p>定期备份 <code>docs/</code> 目录和配置文件。</p>
+<h2 id="技术支持" tabindex="-1">技术支持 <a class="header-anchor" href="#技术支持" aria-label="Permalink to &quot;技术支持&quot;">&ZeroWidthSpace;</a></h2>
+<p>如有问题，请：</p>
+<ol>
+<li>查看 VitePress 官方文档</li>
+<li>搜索相关问题</li>
+<li>提交 Issue</li>
+</ol>
+<hr>
+<p><strong>祝部署顺利！</strong></p>
+</article></main></body></html>

@@ -1,4 +1,4 @@
-# Threads Instagram的新应用 用户体验深度解析
+# 12-Threads Instagram的新应用 用户体验深度解析
 
 Threads：Instagram的新应用，用户体验深度解析 Instagram最近推出了一款名为Threads的新应用，这是一款基于文本的对话应用，它的目标是让社区成员能够聚集在一起，讨论他们关心的各种话题，无论是今天的热门话题，还是预测的未来趋势。
 

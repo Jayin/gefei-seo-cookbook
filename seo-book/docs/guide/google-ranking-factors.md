@@ -1,4 +1,4 @@
-# Google 排名因素
+# 06-Google 排名因素
 
 了解 Google 的排名因素是做好 SEO 的关键。本章将介绍影响 Google 排名的主要因素。
 

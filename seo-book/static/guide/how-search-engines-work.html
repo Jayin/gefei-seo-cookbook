@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>02-搜索引擎工作原理 | Google SEO 实战教程</title><link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../style.css"></head><body><header><nav><a href="../learning-path.html">← 学习路线</a><a href="../learning-path.html#basics">查看本阶段</a></nav></header><main><article><h1 id="_02-搜索引擎工作原理" tabindex="-1">02-搜索引擎工作原理 <a class="header-anchor" href="#_02-搜索引擎工作原理" aria-label="Permalink to &quot;02-搜索引擎工作原理&quot;">&ZeroWidthSpace;</a></h1>
+<p>理解搜索引擎的工作原理是做好 SEO 的基础。本章将详细介绍搜索引擎如何发现、抓取、索引和排名网页。</p>
+<h2 id="一、爬取-crawling" tabindex="-1">一、爬取（Crawling） <a class="header-anchor" href="#一、爬取-crawling" aria-label="Permalink to &quot;一、爬取（Crawling）&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是爬虫" tabindex="-1">什么是爬虫？ <a class="header-anchor" href="#什么是爬虫" aria-label="Permalink to &quot;什么是爬虫？&quot;">&ZeroWidthSpace;</a></h3>
+<p>爬虫是搜索引擎用来发现和抓取网页的自动化程序。Google 的爬虫叫做 Googlebot。</p>
+<h3 id="爬虫的工作流程" tabindex="-1">爬虫的工作流程 <a class="header-anchor" href="#爬虫的工作流程" aria-label="Permalink to &quot;爬虫的工作流程&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li><strong>获取 URL</strong>：爬虫从一个 URL 列表开始</li>
+<li><strong>发起请求</strong>：向服务器发送 HTTP GET 请求</li>
+<li><strong>下载页面</strong>：获取网页的 HTML 源代码</li>
+<li><strong>提取链接</strong>：解析 HTML，提取页面中的所有链接</li>
+<li><strong>添加到队列</strong>：将新发现的链接加入待爬取列表</li>
+</ol>
+<div class="warning custom-block"><p class="custom-block-title">注意</p>
+<p>爬虫只获取 HTML 源代码，不会执行 JavaScript。如果你的网站是前端渲染（CSR），爬虫将无法获取到内容。</p>
+</div>
+<h3 id="爬虫预算-crawl-budget" tabindex="-1">爬虫预算（Crawl Budget） <a class="header-anchor" href="#爬虫预算-crawl-budget" aria-label="Permalink to &quot;爬虫预算（Crawl Budget）&quot;">&ZeroWidthSpace;</a></h3>
+<p>Google 分配给每个网站的爬取资源是有限的，这叫做爬虫预算。</p>
+<p>影响爬虫预算的因素：</p>
+<ul>
+<li>网站权重：高权重网站获得更多爬取资源</li>
+<li>服务器响应速度：响应越快，爬取效率越高</li>
+<li>内容更新频率：更新越频繁，爬取越频繁</li>
+<li>内容质量：低质量内容会降低爬虫预算</li>
+</ul>
+<h2 id="二、索引-indexing" tabindex="-1">二、索引（Indexing） <a class="header-anchor" href="#二、索引-indexing" aria-label="Permalink to &quot;二、索引（Indexing）&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是索引" tabindex="-1">什么是索引？ <a class="header-anchor" href="#什么是索引" aria-label="Permalink to &quot;什么是索引？&quot;">&ZeroWidthSpace;</a></h3>
+<p>索引是搜索引擎将爬取到的网页内容存储到数据库中的过程。</p>
+<h3 id="索引过程" tabindex="-1">索引过程 <a class="header-anchor" href="#索引过程" aria-label="Permalink to &quot;索引过程&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li><strong>内容提取</strong>：从 HTML 中提取正文内容</li>
+<li><strong>分词处理</strong>：将文本分割成单词和短语</li>
+<li><strong>语义分析</strong>：理解内容的主题和含义</li>
+<li><strong>建立索引</strong>：创建正向索引和反向索引</li>
+</ol>
+<h3 id="正向索引-vs-反向索引" tabindex="-1">正向索引 vs 反向索引 <a class="header-anchor" href="#正向索引-vs-反向索引" aria-label="Permalink to &quot;正向索引 vs 反向索引&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>正向索引</strong>：文档 → 关键词列表</li>
+<li><strong>反向索引</strong>：关键词 → 包含该关键词的文档列表</li>
+</ul>
+<p>反向索引是搜索引擎能够快速找到相关文档的关键。</p>
+<h2 id="三、排名-ranking" tabindex="-1">三、排名（Ranking） <a class="header-anchor" href="#三、排名-ranking" aria-label="Permalink to &quot;三、排名（Ranking）&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="排名算法" tabindex="-1">排名算法 <a class="header-anchor" href="#排名算法" aria-label="Permalink to &quot;排名算法&quot;">&ZeroWidthSpace;</a></h3>
+<p>当用户搜索时，搜索引擎会：</p>
+<ol>
+<li><strong>查询处理</strong>：理解用户搜索意图</li>
+<li><strong>文档召回</strong>：从索引中找出所有相关文档</li>
+<li><strong>相关性计算</strong>：计算每个文档与查询的相关性</li>
+<li><strong>排序</strong>：根据相关性和其他因素对文档排序</li>
+<li><strong>结果展示</strong>：返回排名靠前的结果</li>
+</ol>
+<h3 id="主要排名因素" tabindex="-1">主要排名因素 <a class="header-anchor" href="#主要排名因素" aria-label="Permalink to &quot;主要排名因素&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li><strong>内容相关性</strong>：页面内容与搜索词的匹配程度</li>
+<li><strong>内容质量</strong>：内容的原创性、深度、实用性</li>
+<li><strong>网站权重</strong>：网站的整体权威性和信任度</li>
+<li><strong>用户体验</strong>：页面加载速度、移动端适配等</li>
+<li><strong>外链质量</strong>：指向页面的外部链接的质量和数量</li>
+</ol>
+<h2 id="四、爬取、索引、排名的关系" tabindex="-1">四、爬取、索引、排名的关系 <a class="header-anchor" href="#四、爬取、索引、排名的关系" aria-label="Permalink to &quot;四、爬取、索引、排名的关系&quot;">&ZeroWidthSpace;</a></h2>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>爬取 → 索引 → 排名</span></span>
+<span class="line"><span>  ↑      ↓      ↓</span></span>
+<span class="line"><span>  └──────┴──────┘</span></span>
+<span class="line"><span>    反馈循环</span></span></code></pre>
+</div><ul>
+<li>只有被爬取的页面才能被索引</li>
+<li>只有被索引的页面才能参与排名</li>
+<li>排名结果会影响爬虫的爬取优先级</li>
+</ul>
+<h2 id="五、如何让搜索引擎更好地抓取你的网站" tabindex="-1">五、如何让搜索引擎更好地抓取你的网站 <a class="header-anchor" href="#五、如何让搜索引擎更好地抓取你的网站" aria-label="Permalink to &quot;五、如何让搜索引擎更好地抓取你的网站&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-创建-sitemap" tabindex="-1">1. 创建 Sitemap <a class="header-anchor" href="#_1-创建-sitemap" aria-label="Permalink to &quot;1. 创建 Sitemap&quot;">&ZeroWidthSpace;</a></h3>
+<p>Sitemap 是一个 XML 文件，列出了网站的所有重要页面。</p>
+<div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;?</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">xml</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.0"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"UTF-8"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">?></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">urlset</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.sitemaps.org/schemas/sitemap/0.9"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">loc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>https://example.com/&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">loc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">lastmod</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>2024-01-01&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">lastmod</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">changefreq</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>daily&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">changefreq</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>1.0&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">urlset</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h3 id="_2-合理使用-robots-txt" tabindex="-1">2. 合理使用 robots.txt <a class="header-anchor" href="#_2-合理使用-robots-txt" aria-label="Permalink to &quot;2. 合理使用 robots.txt&quot;">&ZeroWidthSpace;</a></h3>
+<p>robots.txt 文件告诉爬虫哪些页面可以抓取，哪些不可以。</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>User-agent: *</span></span>
+<span class="line"><span>Allow: /</span></span>
+<span class="line"><span>Disallow: /admin/</span></span>
+<span class="line"><span>Disallow: /private/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Sitemap: https://example.com/sitemap.xml</span></span></code></pre>
+</div><h3 id="_3-优化网站结构" tabindex="-1">3. 优化网站结构 <a class="header-anchor" href="#_3-优化网站结构" aria-label="Permalink to &quot;3. 优化网站结构&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>保持清晰的层级结构</li>
+<li>使用合理的内部链接</li>
+<li>确保重要页面在首页有链接</li>
+</ul>
+<h3 id="_4-提交到-google-search-console" tabindex="-1">4. 提交到 Google Search Console <a class="header-anchor" href="#_4-提交到-google-search-console" aria-label="Permalink to &quot;4. 提交到 Google Search Console&quot;">&ZeroWidthSpace;</a></h3>
+<p>将网站提交到 Google Search Console，可以：</p>
+<ul>
+<li>监控索引状态</li>
+<li>提交 Sitemap</li>
+<li>查看抓取错误</li>
+<li>请求编入索引</li>
+</ul>
+<h2 id="六、常见问题" tabindex="-1">六、常见问题 <a class="header-anchor" href="#六、常见问题" aria-label="Permalink to &quot;六、常见问题&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="q-为什么我的页面没有被索引" tabindex="-1">Q: 为什么我的页面没有被索引？ <a class="header-anchor" href="#q-为什么我的页面没有被索引" aria-label="Permalink to &quot;Q: 为什么我的页面没有被索引？&quot;">&ZeroWidthSpace;</a></h3>
+<p>可能原因：</p>
+<ol>
+<li>页面被 robots.txt 阻止</li>
+<li>页面有 noindex 标签</li>
+<li>页面内容质量太低</li>
+<li>网站爬虫预算不足</li>
+<li>页面是前端渲染的</li>
+</ol>
+<h3 id="q-如何加快页面被索引的速度" tabindex="-1">Q: 如何加快页面被索引的速度？ <a class="header-anchor" href="#q-如何加快页面被索引的速度" aria-label="Permalink to &quot;Q: 如何加快页面被索引的速度？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>在 Google Search Console 提交页面</li>
+<li>在首页链接新页面</li>
+<li>在社交媒体分享页面</li>
+<li>获取外部链接指向该页面</li>
+</ol>
+<h3 id="q-sitemap-和内链哪个更重要" tabindex="-1">Q: Sitemap 和内链哪个更重要？ <a class="header-anchor" href="#q-sitemap-和内链哪个更重要" aria-label="Permalink to &quot;Q: Sitemap 和内链哪个更重要？&quot;">&ZeroWidthSpace;</a></h3>
+<p>两者都很重要，但内链更重要。Google 更喜欢通过链接来发现页面，Sitemap 只是一个补充建议。</p>
+<div class="tip custom-block"><p class="custom-block-title">关键要点</p>
+<p>理解搜索引擎工作原理是 SEO 的基础。确保你的网站能够被爬虫正常抓取，内容能够被正确索引，才能有机会获得好的排名。</p>
+</div>
+</article><nav class="pagination" aria-label="课程导航"><a href="../guide/index.html">← 上一篇</a><a href="../guide/keyword-research.html">下一篇 →</a></nav></main></body></html>

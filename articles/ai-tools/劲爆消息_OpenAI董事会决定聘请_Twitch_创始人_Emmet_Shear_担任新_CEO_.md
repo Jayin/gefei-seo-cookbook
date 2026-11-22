@@ -1,4 +1,4 @@
-# 劲爆消息 OpenAI董事会决定聘请 Twitch 创始人 Emmet Shear 担任新 CEO 
+# 078-劲爆消息 OpenAI董事会决定聘请 Twitch 创始人 Emmet Shear 担任新 CEO
 
 劲爆消息！
 

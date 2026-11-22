@@ -1,4 +1,4 @@
-# Google Search Console
+# 02-Google Search Console
 
 Google Search Console（GSC）是 Google 提供的免费工具，帮助你监控和维护网站在 Google 搜索结果中的表现。
 

@@ -2,7 +2,7 @@
 
 哥飞公众号文章的个人研究库，以及基于其中 SEO 实战经验整理的教程站点。
 
-原始文章来自公众号「哥飞」（`gefei_offical_article/`，589 篇 `.txt`）。经清洗、分类后存放在 `articles/`，再从中提炼出 `seo-book/` 这本基于 VitePress 的 Google SEO 实战教程。
+原始文章来自公众号「哥飞」（`gefei_offical_article/`，589 篇 `.txt`）。经清洗、分类后存放在 `articles/`（包含此前遗漏的 7 篇短文），再从中提炼出 `seo-book/` 这本基于 VitePress 的 Google SEO 实战教程。
 
 ## 目录结构
 
@@ -21,13 +21,13 @@ gefei_seo/
 
 | 目录 | 主题 | 篇数 |
 | --- | --- | --- |
-| `seo-tutorials` | SEO 教程和技巧 | 161 |
-| `ai-tools` | AI 工具和产品 | 121 |
+| `seo-tutorials` | SEO 教程和技巧 | 162 |
+| `ai-tools` | AI 工具和产品 | 123 |
 | `website-building` | 建站教程 | 89 |
 | `monetization` | 变现方式 | 49 |
-| `community` | 社群运营 | 40 |
+| `community` | 社群运营 | 42 |
 | `product-ops` | 产品运营 | 29 |
-| `case-studies` | 案例分析 | 24 |
+| `case-studies` | 案例分析 | 26 |
 | `demand-mining` | 需求挖掘 | 17 |
 | `overseas-earning` | 出海赚钱经验 | 17 |
 | `indie-dev` | 独立开发者故事 | 14 |
@@ -37,7 +37,21 @@ gefei_seo/
 | `industry` | 行业观察 | 1 |
 | `policy` | 政策解读 | 0 |
 
-完整篇目见 [`articles/README.md`](articles/README.md)。
+完整篇目见 [`articles/README.md`](articles/README.md)；原始文章顺序见 [`gefei_offical_article/README.md`](gefei_offical_article/README.md)。
+
+## 离线阅读静态站点
+
+在文件管理器中打开 [`seo-book/static/index.html`](seo-book/static/index.html)，或将该文件拖入浏览器，即可阅读，无需安装依赖或启动本地服务器。首页按「入门基础 → 实用工具 → 进阶策略 → 案例练习」排列教程；页面下方还可进入哥飞文章分类索引和项目文档。
+
+静态页面通过相对路径互相链接。如果要复制到其他位置或分享离线副本，请复制整个 `seo-book/static/` 目录，不要只复制 `index.html`。
+
+修改 `seo-book/docs/` 中的教程或 `seo-book/` 下的项目文档后，可重新生成静态页面（首次运行需先安装依赖）：
+
+```bash
+cd seo-book
+npm install
+node scripts/build-static.mjs
+```
 
 ## 处理流程
 
@@ -45,6 +59,8 @@ gefei_seo/
 
 1. `process_articles.py`：去掉开头格式标记和末尾营销块，按关键词分类，输出到 `articles/<分类>/`。
 2. `convert_to_markdown.py`：按句号、序号、"第 X 步"等切段，生成带标题的 Markdown。
+
+**注意：** `process_articles.py` 会清空并重建 `articles/`，覆盖现有编号和索引。运行前请先备份。
 
 ```bash
 python3 process_articles.py
@@ -55,7 +71,7 @@ python3 convert_to_markdown.py
 
 ## SEO 教程站点
 
-`seo-book/` 是一本从入门到进阶的 Google SEO 教程，用 VitePress 构建，目前 24 篇：
+`seo-book/` 是一本从入门到进阶的 Google SEO 教程，用 VitePress 构建，目前 23 篇：
 
 - `docs/guide/` — 入门：搜索引擎原理、排名因素、关键词研究、页面 SEO、技术 SEO
 - `docs/advanced/` — 进阶：外链、内容 SEO、程序化 SEO、多语言、网站架构、数据分析、AI SEO、惩罚恢复

@@ -8,7 +8,8 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /guide/
+      link: /learning-path.html
+      target: _self
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress

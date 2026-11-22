@@ -1,4 +1,4 @@
-# Claude Code之父的13大cc使用技巧
+# 049-Claude Code之父的13大cc使用技巧
 
 Claude Code之父的13大cc使用技巧 哥飞 在小说阅读器中沉浸阅读 Claude Code 使用技巧，分享给大家 花叔 . AI Native Coder：AppStore付费榜第一的「小猫补光灯」app开发者，这个账号主要关注AI、AI编程，也对互联网、商业以及更好的生活保有兴趣。
 

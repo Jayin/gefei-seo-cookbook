@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>03-网站架构优化 | Google SEO 实战教程</title><link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../style.css"></head><body><header><nav><a href="../learning-path.html">← 学习路线</a><a href="../learning-path.html#advanced">查看本阶段</a></nav></header><main><article><h1 id="_03-网站架构优化" tabindex="-1">03-网站架构优化 <a class="header-anchor" href="#_03-网站架构优化" aria-label="Permalink to &quot;03-网站架构优化&quot;">&ZeroWidthSpace;</a></h1>
+<p>良好的网站架构可以帮助搜索引擎更好地抓取和理解你的网站，同时也能提升用户体验。本章将介绍如何优化网站架构。</p>
+<h2 id="一、为什么网站架构重要" tabindex="-1">一、为什么网站架构重要？ <a class="header-anchor" href="#一、为什么网站架构重要" aria-label="Permalink to &quot;一、为什么网站架构重要？&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-搜索引擎角度" tabindex="-1">1. 搜索引擎角度 <a class="header-anchor" href="#_1-搜索引擎角度" aria-label="Permalink to &quot;1. 搜索引擎角度&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>帮助爬虫发现页面</li>
+<li>帮助理解页面关系</li>
+<li>提升索引效率</li>
+<li>合理分配权重</li>
+</ul>
+<h3 id="_2-用户角度" tabindex="-1">2. 用户角度 <a class="header-anchor" href="#_2-用户角度" aria-label="Permalink to &quot;2. 用户角度&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>快速找到内容</li>
+<li>清晰的导航</li>
+<li>良好的用户体验</li>
+<li>降低跳出率</li>
+</ul>
+<h2 id="二、网站架构类型" tabindex="-1">二、网站架构类型 <a class="header-anchor" href="#二、网站架构类型" aria-label="Permalink to &quot;二、网站架构类型&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-扁平架构" tabindex="-1">1. 扁平架构 <a class="header-anchor" href="#_1-扁平架构" aria-label="Permalink to &quot;1. 扁平架构&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>首页</span></span>
+<span class="line"><span>├── 页面 1</span></span>
+<span class="line"><span>├── 页面 2</span></span>
+<span class="line"><span>├── 页面 3</span></span>
+<span class="line"><span>├── 页面 4</span></span>
+<span class="line"><span>└── 页面 5</span></span></code></pre>
+</div><p><strong>优点：</strong></p>
+<ul>
+<li>页面深度浅</li>
+<li>爬虫容易抓取</li>
+<li>用户容易找到</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>难以组织大量页面</li>
+<li>缺乏层级结构</li>
+</ul>
+<h3 id="_2-层级架构" tabindex="-1">2. 层级架构 <a class="header-anchor" href="#_2-层级架构" aria-label="Permalink to &quot;2. 层级架构&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>首页</span></span>
+<span class="line"><span>├── 分类 1</span></span>
+<span class="line"><span>│   ├── 子分类 1.1</span></span>
+<span class="line"><span>│   │   ├── 页面 1.1.1</span></span>
+<span class="line"><span>│   │   └── 页面 1.1.2</span></span>
+<span class="line"><span>│   └── 子分类 1.2</span></span>
+<span class="line"><span>│       └── 页面 1.2.1</span></span>
+<span class="line"><span>└── 分类 2</span></span>
+<span class="line"><span>    ├── 页面 2.1</span></span>
+<span class="line"><span>    └── 页面 2.2</span></span></code></pre>
+</div><p><strong>优点：</strong></p>
+<ul>
+<li>清晰的层级结构</li>
+<li>便于组织大量页面</li>
+<li>用户容易理解</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>页面深度可能较深</li>
+<li>需要合理规划</li>
+</ul>
+<h3 id="_3-推荐架构" tabindex="-1">3. 推荐架构 <a class="header-anchor" href="#_3-推荐架构" aria-label="Permalink to &quot;3. 推荐架构&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>理想的网站架构：</strong></p>
+<ul>
+<li>扁平化层级（3 层以内）</li>
+<li>清晰的分类结构</li>
+<li>合理的内部链接</li>
+<li>面包屑导航</li>
+</ul>
+<h2 id="三、页面深度" tabindex="-1">三、页面深度 <a class="header-anchor" href="#三、页面深度" aria-label="Permalink to &quot;三、页面深度&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-什么是页面深度" tabindex="-1">1. 什么是页面深度？ <a class="header-anchor" href="#_1-什么是页面深度" aria-label="Permalink to &quot;1. 什么是页面深度？&quot;">&ZeroWidthSpace;</a></h3>
+<p>页面深度是从首页到达某个页面需要点击的次数。</p>
+<h3 id="_2-为什么重要" tabindex="-1">2. 为什么重要？ <a class="header-anchor" href="#_2-为什么重要" aria-label="Permalink to &quot;2. 为什么重要？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>影响爬虫抓取效率</li>
+<li>影响页面权重分配</li>
+<li>影响用户体验</li>
+</ul>
+<h3 id="_3-最佳实践" tabindex="-1">3. 最佳实践 <a class="header-anchor" href="#_3-最佳实践" aria-label="Permalink to &quot;3. 最佳实践&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>建议：</strong></p>
+<ul>
+<li>重要页面在 2 次点击内到达</li>
+<li>所有页面在 3 次点击内到达</li>
+<li>避免过深的层级</li>
+</ul>
+<p><strong>实现方法：</strong></p>
+<ul>
+<li>在首页链接重要页面</li>
+<li>使用分类页面</li>
+<li>合理的内部链接</li>
+<li>面包屑导航</li>
+</ul>
+<h2 id="四、内部链接策略" tabindex="-1">四、内部链接策略 <a class="header-anchor" href="#四、内部链接策略" aria-label="Permalink to &quot;四、内部链接策略&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-内部链接的作用" tabindex="-1">1. 内部链接的作用 <a class="header-anchor" href="#_1-内部链接的作用" aria-label="Permalink to &quot;1. 内部链接的作用&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>帮助爬虫发现页面</li>
+<li>传递页面权重</li>
+<li>提升用户体验</li>
+<li>降低跳出率</li>
+</ul>
+<h3 id="_2-内链结构" tabindex="-1">2. 内链结构 <a class="header-anchor" href="#_2-内链结构" aria-label="Permalink to &quot;2. 内链结构&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>首页 → 分类页 → 内容页</strong></p>
+<ul>
+<li>清晰的层级结构</li>
+<li>权重合理分配</li>
+<li>用户容易导航</li>
+</ul>
+<h3 id="_3-内链最佳实践" tabindex="-1">3. 内链最佳实践 <a class="header-anchor" href="#_3-内链最佳实践" aria-label="Permalink to &quot;3. 内链最佳实践&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>使用描述性锚文本：</strong></p>
+<div class="language-html vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">html</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 好的锚文本 --></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/guide/keyword-research"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>学习关键词研究&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 不好的锚文本 --></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/guide/keyword-research"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>点击这里&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><p><strong>链接到相关页面：</strong></p>
+<ul>
+<li>内容相关的页面互相链接</li>
+<li>新页面在首页有链接</li>
+<li>重要页面获得更多内链</li>
+</ul>
+<p><strong>保持合理的链接数量：</strong></p>
+<ul>
+<li>每个页面 3-5 个内部链接</li>
+<li>避免过多的链接</li>
+<li>确保链接有价值</li>
+</ul>
+<h3 id="_4-内链建设方法" tabindex="-1">4. 内链建设方法 <a class="header-anchor" href="#_4-内链建设方法" aria-label="Permalink to &quot;4. 内链建设方法&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>方法 1：相关内容推荐</strong>
+在页面底部或侧边栏添加相关内容链接。</p>
+<p><strong>方法 2：面包屑导航</strong>
+显示当前页面的位置和路径。</p>
+<p><strong>方法 3：首页链接</strong>
+在首页链接最新、最热门的内容。</p>
+<p><strong>方法 4：分类页面</strong>
+在分类页面列出所有相关内容。</p>
+<h2 id="五、导航优化" tabindex="-1">五、导航优化 <a class="header-anchor" href="#五、导航优化" aria-label="Permalink to &quot;五、导航优化&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-主导航" tabindex="-1">1. 主导航 <a class="header-anchor" href="#_1-主导航" aria-label="Permalink to &quot;1. 主导航&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>最佳实践：</strong></p>
+<ul>
+<li>清晰的分类</li>
+<li>简洁的标签</li>
+<li>重要的页面在前</li>
+<li>响应式设计</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="language-html vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">html</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">nav</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">ul</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>首页&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/guide/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>入门指南&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/advanced/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>进阶技巧&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/tools/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>工具推荐&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/case-studies/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>案例分析&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">ul</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">nav</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h3 id="_2-面包屑导航" tabindex="-1">2. 面包屑导航 <a class="header-anchor" href="#_2-面包屑导航" aria-label="Permalink to &quot;2. 面包屑导航&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>作用：</strong></p>
+<ul>
+<li>显示页面位置</li>
+<li>帮助用户导航</li>
+<li>帮助搜索引擎理解结构</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="language-html vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">html</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">nav</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> aria-label</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"面包屑"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">ol</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>首页&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/guide/"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>入门指南&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">a</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>关键词研究&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">li</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">ol</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">nav</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h3 id="_3-页脚导航" tabindex="-1">3. 页脚导航 <a class="header-anchor" href="#_3-页脚导航" aria-label="Permalink to &quot;3. 页脚导航&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>最佳实践：</strong></p>
+<ul>
+<li>链接到重要页面</li>
+<li>包含联系方式</li>
+<li>包含法律信息</li>
+<li>包含社交媒体链接</li>
+</ul>
+<h2 id="六、url-结构" tabindex="-1">六、URL 结构 <a class="header-anchor" href="#六、url-结构" aria-label="Permalink to &quot;六、URL 结构&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-url-设计原则" tabindex="-1">1. URL 设计原则 <a class="header-anchor" href="#_1-url-设计原则" aria-label="Permalink to &quot;1. URL 设计原则&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>好的 URL：</strong></p>
+<ul>
+<li>简短易读</li>
+<li>包含关键词</li>
+<li>使用小写字母</li>
+<li>使用连字符分隔</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>https://example.com/guide/keyword-research</span></span></code></pre>
+</div><p><strong>不好的 URL：</strong></p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>https://example.com/index.php?id=123&#x26;cat=456</span></span></code></pre>
+</div><h3 id="_2-url-层级" tabindex="-1">2. URL 层级 <a class="header-anchor" href="#_2-url-层级" aria-label="Permalink to &quot;2. URL 层级&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>推荐结构：</strong></p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>首页：/</span></span>
+<span class="line"><span>分类页：/category/</span></span>
+<span class="line"><span>子分类页：/category/subcategory/</span></span>
+<span class="line"><span>内容页：/category/subcategory/page/</span></span></code></pre>
+</div><h3 id="_3-url-最佳实践" tabindex="-1">3. URL 最佳实践 <a class="header-anchor" href="#_3-url-最佳实践" aria-label="Permalink to &quot;3. URL 最佳实践&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>使用小写字母</li>
+<li>使用连字符分隔单词</li>
+<li>保持简短</li>
+<li>包含关键词</li>
+<li>避免特殊字符</li>
+<li>避免参数过多</li>
+</ul>
+<h2 id="七、sitemap-优化" tabindex="-1">七、Sitemap 优化 <a class="header-anchor" href="#七、sitemap-优化" aria-label="Permalink to &quot;七、Sitemap 优化&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-sitemap-的作用" tabindex="-1">1. Sitemap 的作用 <a class="header-anchor" href="#_1-sitemap-的作用" aria-label="Permalink to &quot;1. Sitemap 的作用&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>帮助搜索引擎发现页面</li>
+<li>提供页面更新信息</li>
+<li>提供页面优先级</li>
+</ul>
+<h3 id="_2-sitemap-类型" tabindex="-1">2. Sitemap 类型 <a class="header-anchor" href="#_2-sitemap-类型" aria-label="Permalink to &quot;2. Sitemap 类型&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>XML Sitemap：</strong></p>
+<div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;?</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">xml</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1.0"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"UTF-8"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">?></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">urlset</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> xmlns</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http://www.sitemaps.org/schemas/sitemap/0.9"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">loc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>https://example.com/&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">loc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">lastmod</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>2024-01-01&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">lastmod</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">changefreq</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>daily&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">changefreq</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>1.0&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">urlset</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><p><strong>HTML Sitemap：</strong></p>
+<ul>
+<li>面向用户的页面</li>
+<li>列出网站所有重要页面</li>
+<li>帮助用户找到内容</li>
+</ul>
+<h3 id="_3-sitemap-最佳实践" tabindex="-1">3. Sitemap 最佳实践 <a class="header-anchor" href="#_3-sitemap-最佳实践" aria-label="Permalink to &quot;3. Sitemap 最佳实践&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>只包含规范页面</li>
+<li>及时更新 lastmod</li>
+<li>提交到 Google Search Console</li>
+<li>保持文件大小合理（50MB 或 50,000 URL）</li>
+</ul>
+<h2 id="八、3-个实战架构决策" tabindex="-1">八、3 个实战架构决策 <a class="header-anchor" href="#八、3-个实战架构决策" aria-label="Permalink to &quot;八、3 个实战架构决策&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-3-层点击深度规则" tabindex="-1">1. 3 层点击深度规则 <a class="header-anchor" href="#_1-3-层点击深度规则" aria-label="Permalink to &quot;1. 3 层点击深度规则&quot;">&ZeroWidthSpace;</a></h3>
+<p>&quot;所有页面在 3 次点击内到达&quot;这个建议比常见的&quot;5 次点击&quot;更严格。</p>
+<p><strong>实操建议：</strong> 把深度转化为宽度。参考 Toolify 的 footer 设计——在页脚直接列出所有重要分类链接，让任何页面都能从首页 + 分类页 + 内容页（3 步）到达。</p>
+<h3 id="_2-子域名-vs-子目录" tabindex="-1">2. 子域名 vs 子目录 <a class="header-anchor" href="#_2-子域名-vs-子目录" aria-label="Permalink to &quot;2. 子域名 vs 子目录&quot;">&ZeroWidthSpace;</a></h3>
+<p>这是一个经典争论。答案取决于你的关键词策略：</p>
+<table tabindex="0">
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同一主题的不同页面</td>
+<td>子目录</td>
+<td>共享域名权重</td>
+</tr>
+<tr>
+<td>完全不同的关键词领域</td>
+<td>子域名</td>
+<td>Google 将子域名视为独立站点，关键词聚焦更紧密</td>
+</tr>
+</tbody>
+</table>
+<p><strong>案例：</strong> 日本工具站 onl.jp（年访问量 2361 万，51.87% 来自搜索，仅 90 个索引页面）使用子域名为每个工具做独立站点，每个子域名聚焦一个关键词，效果很好。</p>
+<h3 id="_3-后端渲染是强制要求" tabindex="-1">3. 后端渲染是强制要求 <a class="header-anchor" href="#_3-后端渲染是强制要求" aria-label="Permalink to &quot;3. 后端渲染是强制要求&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>核心事实：</strong> Google 的爬虫发送 GET 请求，解析 HTML——它不会为小站执行 JavaScript。</p>
+<p>&quot;Google 只给大站开这个特权，因为它迫切需要大站的内容。&quot;</p>
+<p>如果你的网站是纯前端渲染（React、Vue、Angular SPA），Googlebot 看到的将是一个空 body。这对新站和中小站是致命的。</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>使用 Next.js/Nuxt.js 等框架的服务端渲染（SSR）</li>
+<li>或者在 React root 下方加一个服务端渲染的静态 HTML 区域</li>
+<li>至少确保核心内容在 HTML 源码中可见</li>
+</ul>
+<h2 id="九、网站架构检查" tabindex="-1">九、网站架构检查 <a class="header-anchor" href="#九、网站架构检查" aria-label="Permalink to &quot;九、网站架构检查&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_1-检查工具" tabindex="-1">1. 检查工具 <a class="header-anchor" href="#_1-检查工具" aria-label="Permalink to &quot;1. 检查工具&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>免费工具：</strong></p>
+<ul>
+<li>Google Search Console</li>
+<li>Screaming Frog（免费版）</li>
+</ul>
+<p><strong>付费工具：</strong></p>
+<ul>
+<li>Screaming Frog（付费版）</li>
+<li>Sitebulb</li>
+<li>Ahrefs</li>
+</ul>
+<h3 id="_2-检查项目" tabindex="-1">2. 检查项目 <a class="header-anchor" href="#_2-检查项目" aria-label="Permalink to &quot;2. 检查项目&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>架构检查：</strong></p>
+<ul>
+<li>[ ] 页面深度合理</li>
+<li>[ ] 内部链接结构清晰</li>
+<li>[ ] 导航清晰易用</li>
+<li>[ ] URL 结构合理</li>
+</ul>
+<p><strong>技术检查：</strong></p>
+<ul>
+<li>[ ] Sitemap 正确</li>
+<li>[ ] robots.txt 正确</li>
+<li>[ ] 没有死链接</li>
+<li>[ ] 没有重复内容</li>
+</ul>
+<p><strong>用户体验检查：</strong></p>
+<ul>
+<li>[ ] 导航清晰</li>
+<li>[ ] 面包屑导航</li>
+<li>[ ] 页面加载快</li>
+<li>[ ] 移动端友好</li>
+</ul>
+<h2 id="十、常见问题" tabindex="-1">十、常见问题 <a class="header-anchor" href="#十、常见问题" aria-label="Permalink to &quot;十、常见问题&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="q-页面深度多少合适" tabindex="-1">Q: 页面深度多少合适？ <a class="header-anchor" href="#q-页面深度多少合适" aria-label="Permalink to &quot;Q: 页面深度多少合适？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 建议所有页面在 3 次点击内到达。重要页面应该在 1-2 次点击内到达。</p>
+<h3 id="q-内部链接数量多少合适" tabindex="-1">Q: 内部链接数量多少合适？ <a class="header-anchor" href="#q-内部链接数量多少合适" aria-label="Permalink to &quot;Q: 内部链接数量多少合适？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 没有固定数量，但每个页面应该有 3-5 个内部链接，指向相关内容。</p>
+<h3 id="q-如何优化大型网站架构" tabindex="-1">Q: 如何优化大型网站架构？ <a class="header-anchor" href="#q-如何优化大型网站架构" aria-label="Permalink to &quot;Q: 如何优化大型网站架构？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 使用清晰的分类结构，合理的内部链接，Sitemap，以及面包屑导航。</p>
+<h3 id="q-扁平架构和层级架构哪个好" tabindex="-1">Q: 扁平架构和层级架构哪个好？ <a class="header-anchor" href="#q-扁平架构和层级架构哪个好" aria-label="Permalink to &quot;Q: 扁平架构和层级架构哪个好？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 取决于网站规模。小型网站可以用扁平架构，大型网站需要层级架构。</p>
+<h2 id="十一、实战案例" tabindex="-1">十一、实战案例 <a class="header-anchor" href="#十一、实战案例" aria-label="Permalink to &quot;十一、实战案例&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="案例-工具网站架构优化" tabindex="-1">案例：工具网站架构优化 <a class="header-anchor" href="#案例-工具网站架构优化" aria-label="Permalink to &quot;案例：工具网站架构优化&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>背景：</strong></p>
+<ul>
+<li>有 1000+ 工具页面</li>
+<li>页面深度较深</li>
+<li>内部链接混乱</li>
+</ul>
+<p><strong>优化步骤：</strong></p>
+<ol>
+<li>
+<p><strong>分析现有架构</strong></p>
+<ul>
+<li>使用 Screaming Frog 爬取</li>
+<li>分析页面深度</li>
+<li>找出问题页面</li>
+</ul>
+</li>
+<li>
+<p><strong>重新设计架构</strong></p>
+<ul>
+<li>创建清晰的分类</li>
+<li>减少页面深度</li>
+<li>优化内部链接</li>
+</ul>
+</li>
+<li>
+<p><strong>实现优化</strong></p>
+<ul>
+<li>更新导航</li>
+<li>添加面包屑</li>
+<li>优化内部链接</li>
+</ul>
+</li>
+<li>
+<p><strong>监控效果</strong></p>
+<ul>
+<li>监控索引状态</li>
+<li>监控排名变化</li>
+<li>监控用户体验</li>
+</ul>
+</li>
+</ol>
+<p><strong>结果：</strong></p>
+<ul>
+<li>页面索引率提升</li>
+<li>用户停留时间增加</li>
+<li>跳出率降低</li>
+</ul>
+<h2 id="十二、网站架构检查清单" tabindex="-1">十二、网站架构检查清单 <a class="header-anchor" href="#十二、网站架构检查清单" aria-label="Permalink to &quot;十二、网站架构检查清单&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="架构检查" tabindex="-1">架构检查 <a class="header-anchor" href="#架构检查" aria-label="Permalink to &quot;架构检查&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>[ ] 页面深度合理（3 层以内）</li>
+<li>[ ] 清晰的分类结构</li>
+<li>[ ] 合理的内部链接</li>
+<li>[ ] 面包屑导航</li>
+</ul>
+<h3 id="导航检查" tabindex="-1">导航检查 <a class="header-anchor" href="#导航检查" aria-label="Permalink to &quot;导航检查&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>[ ] 主导航清晰</li>
+<li>[ ] 面包屑导航</li>
+<li>[ ] 页脚导航</li>
+<li>[ ] 移动端导航</li>
+</ul>
+<h3 id="url-检查" tabindex="-1">URL 检查 <a class="header-anchor" href="#url-检查" aria-label="Permalink to &quot;URL 检查&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>[ ] URL 简短易读</li>
+<li>[ ] 包含关键词</li>
+<li>[ ] 使用小写字母</li>
+<li>[ ] 使用连字符</li>
+</ul>
+<h3 id="技术检查" tabindex="-1">技术检查 <a class="header-anchor" href="#技术检查" aria-label="Permalink to &quot;技术检查&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>[ ] Sitemap 正确</li>
+<li>[ ] robots.txt 正确</li>
+<li>[ ] 没有死链接</li>
+<li>[ ] 没有重复内容</li>
+</ul>
+<div class="tip custom-block"><p class="custom-block-title">关键要点</p>
+<p>良好的网站架构是 SEO 的基础。确保页面深度合理，内部链接结构清晰，导航易用，URL 结构规范。</p>
+</div>
+</article><nav class="pagination" aria-label="课程导航"><a href="../advanced/content-seo.html">← 上一篇</a><a href="../advanced/seo-analytics.html">下一篇 →</a></nav></main></body></html>

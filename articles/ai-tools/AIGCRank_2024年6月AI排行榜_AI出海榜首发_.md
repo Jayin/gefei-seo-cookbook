@@ -1,4 +1,4 @@
-# AIGCRank 2024年6月AI排行榜 AI出海榜首发 
+# 042-AIGCRank 2024年6月AI排行榜 AI出海榜首发
 
 AIGCRank：2024年6月AI排行榜，AI出海榜首发！
 

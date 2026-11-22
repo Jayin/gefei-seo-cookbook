@@ -1,4 +1,4 @@
-# Claude for Chrome 一手体验 自动回复微信 发Twitter 做调研  做AI浏览器的创业者该慌了 比赛已经结束
+# 050-Claude for Chrome 一手体验 自动回复微信 发Twitter 做调研  做AI浏览器的创业者该慌了 比赛已经结束
 
 Claude for Chrome 一手体验！
 
