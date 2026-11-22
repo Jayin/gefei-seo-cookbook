@@ -1,0 +1,156 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>01-Google SEO 实战教程</title><link rel="stylesheet" href="../style.css"></head><body><header><nav><a href="./index.html">← 项目文档</a><a href="../learning-path.html">学习路线</a></nav></header><main><article><h1 id="_01-google-seo-实战教程" tabindex="-1">01-Google SEO 实战教程 <a class="header-anchor" href="#_01-google-seo-实战教程" aria-label="Permalink to &quot;01-Google SEO 实战教程&quot;">&ZeroWidthSpace;</a></h1>
+<p>从零开始学习 Google SEO 优化，掌握搜索引擎优化的核心技巧。</p>
+<h2 id="项目简介" tabindex="-1">项目简介 <a class="header-anchor" href="#项目简介" aria-label="Permalink to &quot;项目简介&quot;">&ZeroWidthSpace;</a></h2>
+<p>这是一个基于 VitePress 构建的 SEO 教程网站，旨在帮助初学者系统学习 Google SEO 优化知识。</p>
+<h2 id="功能特点" tabindex="-1">功能特点 <a class="header-anchor" href="#功能特点" aria-label="Permalink to &quot;功能特点&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li>系统化的 SEO 知识体系</li>
+<li>从入门到进阶的学习路径</li>
+<li>丰富的实战案例分析</li>
+<li>实用的工具推荐</li>
+<li>响应式设计，支持移动端</li>
+</ul>
+<h2 id="技术栈" tabindex="-1">技术栈 <a class="header-anchor" href="#技术栈" aria-label="Permalink to &quot;技术栈&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li><strong>框架：</strong> VitePress</li>
+<li><strong>语言：</strong> TypeScript</li>
+<li><strong>样式：</strong> CSS</li>
+<li><strong>部署：</strong> 静态站点</li>
+</ul>
+<h2 id="快速开始" tabindex="-1">快速开始 <a class="header-anchor" href="#快速开始" aria-label="Permalink to &quot;快速开始&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="离线阅读" tabindex="-1">离线阅读 <a class="header-anchor" href="#离线阅读" aria-label="Permalink to &quot;离线阅读&quot;">&ZeroWidthSpace;</a></h3>
+<p>直接打开 <a href="../index.html">静态首页</a>，即可浏览教程和 589 篇文章，无需启动服务器。Markdown 教程更新后，维护者可在安装项目依赖的环境中运行 <code>node scripts/build-static.mjs</code>，重新生成 <code>static/</code> 下的离线页面。</p>
+<h3 id="环境要求" tabindex="-1">环境要求 <a class="header-anchor" href="#环境要求" aria-label="Permalink to &quot;环境要求&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>Node.js &gt;= 16</li>
+<li>npm &gt;= 7</li>
+</ul>
+<h3 id="安装依赖" tabindex="-1">安装依赖 <a class="header-anchor" href="#安装依赖" aria-label="Permalink to &quot;安装依赖&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span></span></code></pre>
+</div><h3 id="本地开发" tabindex="-1">本地开发 <a class="header-anchor" href="#本地开发" aria-label="Permalink to &quot;本地开发&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span></span></code></pre>
+</div><p>访问 <a href="http://localhost:5173" target="_blank" rel="noreferrer">http://localhost:5173</a> 查看效果。</p>
+<h3 id="构建生产版本" tabindex="-1">构建生产版本 <a class="header-anchor" href="#构建生产版本" aria-label="Permalink to &quot;构建生产版本&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div><h3 id="预览生产版本" tabindex="-1">预览生产版本 <a class="header-anchor" href="#预览生产版本" aria-label="Permalink to &quot;预览生产版本&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> preview</span></span></code></pre>
+</div><h2 id="目录结构" tabindex="-1">目录结构 <a class="header-anchor" href="#目录结构" aria-label="Permalink to &quot;目录结构&quot;">&ZeroWidthSpace;</a></h2>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>seo-book/</span></span>
+<span class="line"><span>├── docs/                    # 文档目录</span></span>
+<span class="line"><span>│   ├── .vitepress/          # VitePress 配置</span></span>
+<span class="line"><span>│   │   └── config.mts       # 配置文件</span></span>
+<span class="line"><span>│   ├── guide/               # 入门指南</span></span>
+<span class="line"><span>│   │   ├── index.md         # 什么是 SEO</span></span>
+<span class="line"><span>│   │   ├── how-search-engines-work.md  # 搜索引擎工作原理</span></span>
+<span class="line"><span>│   │   ├── google-ranking-factors.md   # Google 排名因素</span></span>
+<span class="line"><span>│   │   ├── keyword-research.md         # 关键词研究基础</span></span>
+<span class="line"><span>│   │   ├── on-page-seo.md              # 页面 SEO 优化</span></span>
+<span class="line"><span>│   │   └── technical-seo.md            # 技术 SEO 基础</span></span>
+<span class="line"><span>│   ├── advanced/            # 进阶技巧</span></span>
+<span class="line"><span>│   │   ├── link-building.md            # 外链建设策略</span></span>
+<span class="line"><span>│   │   ├── content-seo.md              # 内容 SEO 策略</span></span>
+<span class="line"><span>│   │   ├── programmatic-seo.md         # 程序化 SEO</span></span>
+<span class="line"><span>│   │   ├── multilingual-seo.md         # 多语言 SEO</span></span>
+<span class="line"><span>│   │   ├── site-architecture.md        # 网站架构优化</span></span>
+<span class="line"><span>│   │   └── seo-analytics.md            # SEO 数据分析</span></span>
+<span class="line"><span>│   ├── tools/               # 工具推荐</span></span>
+<span class="line"><span>│   │   ├── index.md                    # SEO 工具概览</span></span>
+<span class="line"><span>│   │   ├── google-search-console.md    # Google Search Console</span></span>
+<span class="line"><span>│   │   ├── google-analytics.md         # Google Analytics</span></span>
+<span class="line"><span>│   │   ├── keyword-tools.md            # 关键词研究工具</span></span>
+<span class="line"><span>│   │   └── technical-tools.md          # 技术 SEO 工具</span></span>
+<span class="line"><span>│   ├── case-studies/        # 案例分析</span></span>
+<span class="line"><span>│   │   ├── index.md                    # 案例分析概览</span></span>
+<span class="line"><span>│   │   ├── tool-site-case.md           # 工具网站案例</span></span>
+<span class="line"><span>│   │   └── content-site-case.md        # 内容网站案例</span></span>
+<span class="line"><span>│   └── index.md             # 首页</span></span>
+<span class="line"><span>├── package.json             # 项目配置</span></span>
+<span class="line"><span>└── README.md                # 项目说明</span></span></code></pre>
+</div><h2 id="内容概览" tabindex="-1">内容概览 <a class="header-anchor" href="#内容概览" aria-label="Permalink to &quot;内容概览&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="入门指南" tabindex="-1">入门指南 <a class="header-anchor" href="#入门指南" aria-label="Permalink to &quot;入门指南&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>什么是 SEO</strong> - SEO 的基本概念和重要性</li>
+<li><strong>搜索引擎工作原理</strong> - 了解搜索引擎如何抓取、索引和排名</li>
+<li><strong>Google 排名因素</strong> - 影响 Google 排名的主要因素</li>
+<li><strong>关键词研究基础</strong> - 如何找到有价值的关键词</li>
+<li><strong>页面 SEO 优化</strong> - 优化页面元素提升排名</li>
+<li><strong>技术 SEO 基础</strong> - 确保网站技术架构对搜索引擎友好</li>
+</ul>
+<h3 id="进阶技巧" tabindex="-1">进阶技巧 <a class="header-anchor" href="#进阶技巧" aria-label="Permalink to &quot;进阶技巧&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>外链建设策略</strong> - 如何获取高质量外链</li>
+<li><strong>内容 SEO 策略</strong> - 创建高质量内容的方法</li>
+<li><strong>程序化 SEO</strong> - 批量创建页面获取流量</li>
+<li><strong>多语言 SEO</strong> - 优化多语言网站</li>
+<li><strong>网站架构优化</strong> - 优化网站结构提升 SEO</li>
+<li><strong>SEO 数据分析</strong> - 使用数据驱动 SEO 优化</li>
+</ul>
+<h3 id="工具推荐" tabindex="-1">工具推荐 <a class="header-anchor" href="#工具推荐" aria-label="Permalink to &quot;工具推荐&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>SEO 工具概览</strong> - 常用 SEO 工具介绍</li>
+<li><strong>Google Search Console</strong> - 免费 SEO 工具</li>
+<li><strong>Google Analytics</strong> - 网站分析工具</li>
+<li><strong>关键词研究工具</strong> - 关键词研究工具推荐</li>
+<li><strong>技术 SEO 工具</strong> - 技术 SEO 工具推荐</li>
+</ul>
+<h3 id="案例分析" tabindex="-1">案例分析 <a class="header-anchor" href="#案例分析" aria-label="Permalink to &quot;案例分析&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>工具网站案例</strong> - 分析成功的工具网站</li>
+<li><strong>内容网站案例</strong> - 分析成功的内容网站</li>
+</ul>
+<h2 id="学习建议" tabindex="-1">学习建议 <a class="header-anchor" href="#学习建议" aria-label="Permalink to &quot;学习建议&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="初学者" tabindex="-1">初学者 <a class="header-anchor" href="#初学者" aria-label="Permalink to &quot;初学者&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>从入门指南开始学习</li>
+<li>了解搜索引擎工作原理</li>
+<li>学习关键词研究方法</li>
+<li>掌握页面优化技巧</li>
+<li>了解技术 SEO 基础</li>
+</ol>
+<h3 id="进阶用户" tabindex="-1">进阶用户 <a class="header-anchor" href="#进阶用户" aria-label="Permalink to &quot;进阶用户&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>学习外链建设策略</li>
+<li>掌握内容 SEO 策略</li>
+<li>了解程序化 SEO</li>
+<li>学习数据分析方法</li>
+<li>分析成功案例</li>
+</ol>
+<h3 id="专业用户" tabindex="-1">专业用户 <a class="header-anchor" href="#专业用户" aria-label="Permalink to &quot;专业用户&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>深入学习技术 SEO</li>
+<li>掌握高级优化技巧</li>
+<li>学习数据分析方法</li>
+<li>分析竞争对手</li>
+<li>持续优化和改进</li>
+</ol>
+<h2 id="常见问题" tabindex="-1">常见问题 <a class="header-anchor" href="#常见问题" aria-label="Permalink to &quot;常见问题&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="q-学习-seo-需要多长时间" tabindex="-1">Q: 学习 SEO 需要多长时间？ <a class="header-anchor" href="#q-学习-seo-需要多长时间" aria-label="Permalink to &quot;Q: 学习 SEO 需要多长时间？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 取决于你的基础和学习时间。通常需要 3-6 个月才能看到明显效果。</p>
+<h3 id="q-seo-还有效吗" tabindex="-1">Q: SEO 还有效吗？ <a class="header-anchor" href="#q-seo-还有效吗" aria-label="Permalink to &quot;Q: SEO 还有效吗？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 有效。SEO 仍然是获取免费流量的最有效方式之一。</p>
+<h3 id="q-需要学习编程吗" tabindex="-1">Q: 需要学习编程吗？ <a class="header-anchor" href="#q-需要学习编程吗" aria-label="Permalink to &quot;Q: 需要学习编程吗？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 不需要，但了解基本的 HTML 和 CSS 会有帮助。</p>
+<h3 id="q-如何开始学习-seo" tabindex="-1">Q: 如何开始学习 SEO？ <a class="header-anchor" href="#q-如何开始学习-seo" aria-label="Permalink to &quot;Q: 如何开始学习 SEO？&quot;">&ZeroWidthSpace;</a></h3>
+<p>A: 从入门指南开始，逐步学习各个模块，结合实践操作。</p>
+<h2 id="贡献指南" tabindex="-1">贡献指南 <a class="header-anchor" href="#贡献指南" aria-label="Permalink to &quot;贡献指南&quot;">&ZeroWidthSpace;</a></h2>
+<p>欢迎贡献内容！请遵循以下步骤：</p>
+<ol>
+<li>Fork 项目</li>
+<li>创建你的特性分支 (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>提交你的更改 (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>推送到分支 (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>打开一个 Pull Request</li>
+</ol>
+<h2 id="许可证" tabindex="-1">许可证 <a class="header-anchor" href="#许可证" aria-label="Permalink to &quot;许可证&quot;">&ZeroWidthSpace;</a></h2>
+<p>本项目采用 MIT 许可证 - 查看 <a href="./LICENSE">LICENSE</a> 文件了解详情。</p>
+<h2 id="联系方式" tabindex="-1">联系方式 <a class="header-anchor" href="#联系方式" aria-label="Permalink to &quot;联系方式&quot;">&ZeroWidthSpace;</a></h2>
+<p>如有问题或建议，请通过以下方式联系：</p>
+<ul>
+<li>提交 Issue</li>
+<li>发送邮件</li>
+</ul>
+<h2 id="致谢" tabindex="-1">致谢 <a class="header-anchor" href="#致谢" aria-label="Permalink to &quot;致谢&quot;">&ZeroWidthSpace;</a></h2>
+<p>感谢所有为本教程贡献内容和建议的人。</p>
+<hr>
+<p><strong>开始学习：</strong> <a href="../guide/index.html">什么是 SEO</a></p>
+</article></main></body></html>

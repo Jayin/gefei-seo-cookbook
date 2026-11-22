@@ -2,7 +2,7 @@
 
 哥飞公众号文章的个人研究库，以及基于其中 SEO 实战经验整理的教程站点。
 
-原始文章来自公众号「哥飞」（`gefei_offical_article/`，589 篇 `.txt`）。经清洗、分类后存放在 `articles/`，再从中提炼出 `seo-book/` 这本基于 VitePress 的 Google SEO 实战教程。
+原始文章来自公众号「哥飞」（`gefei_offical_article/`，589 篇 `.txt`）。经清洗、分类后存放在 `articles/`（包含此前遗漏的 7 篇短文），再从中提炼出 `seo-book/` 这本基于 VitePress 的 Google SEO 实战教程。
 
 ## 目录结构
 
@@ -21,13 +21,13 @@ gefei_seo/
 
 | 目录 | 主题 | 篇数 |
 | --- | --- | --- |
-| `seo-tutorials` | SEO 教程和技巧 | 161 |
-| `ai-tools` | AI 工具和产品 | 121 |
+| `seo-tutorials` | SEO 教程和技巧 | 162 |
+| `ai-tools` | AI 工具和产品 | 123 |
 | `website-building` | 建站教程 | 89 |
 | `monetization` | 变现方式 | 49 |
-| `community` | 社群运营 | 40 |
+| `community` | 社群运营 | 42 |
 | `product-ops` | 产品运营 | 29 |
-| `case-studies` | 案例分析 | 24 |
+| `case-studies` | 案例分析 | 26 |
 | `demand-mining` | 需求挖掘 | 17 |
 | `overseas-earning` | 出海赚钱经验 | 17 |
 | `indie-dev` | 独立开发者故事 | 14 |
@@ -37,7 +37,7 @@ gefei_seo/
 | `industry` | 行业观察 | 1 |
 | `policy` | 政策解读 | 0 |
 
-完整篇目见 [`articles/README.md`](articles/README.md)。
+完整篇目见 [`articles/README.md`](articles/README.md)；原始文章顺序见 [`gefei_offical_article/README.md`](gefei_offical_article/README.md)。离线阅读可直接打开 [静态首页](seo-book/static/index.html)。
 
 ## 处理流程
 
@@ -45,6 +45,8 @@ gefei_seo/
 
 1. `process_articles.py`：去掉开头格式标记和末尾营销块，按关键词分类，输出到 `articles/<分类>/`。
 2. `convert_to_markdown.py`：按句号、序号、"第 X 步"等切段，生成带标题的 Markdown。
+
+**注意：** `process_articles.py` 会清空并重建 `articles/`，覆盖现有编号和索引。运行前请先备份。
 
 ```bash
 python3 process_articles.py

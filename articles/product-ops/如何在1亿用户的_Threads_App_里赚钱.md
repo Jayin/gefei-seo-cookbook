@@ -1,4 +1,4 @@
-# 如何在1亿用户的 Threads App 里赚钱
+# 24-如何在1亿用户的 Threads App 里赚钱
 
 如何在1亿用户的 Threads App 里赚钱 ​关于如何在 Threads 赚钱， 我的一点思考。
 

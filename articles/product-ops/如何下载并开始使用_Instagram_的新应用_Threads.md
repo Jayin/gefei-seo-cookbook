@@ -1,4 +1,4 @@
-# 如何下载并开始使用 Instagram 的新应用 Threads
+# 23-如何下载并开始使用 Instagram 的新应用 Threads
 
 如何下载并开始使用 Instagram 的新应用 Threads Instagram最近推出了一款名为Threads的新应用，这是一款基于文本的对话应用，它的目标是让社区成员能够聚集在一起，讨论他们关心的各种话题，无论是今天的热门话题，还是预测的未来趋势。
 

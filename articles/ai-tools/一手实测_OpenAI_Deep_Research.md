@@ -1,4 +1,4 @@
-# 一手实测 OpenAI Deep Research
+# 062-一手实测 OpenAI Deep Research
 
 一手实测：OpenAI Deep Research 哥飞 在小说阅读器中沉浸阅读 全网首篇 OpenAI 的 Deep Research 功能实测文章 赛博禅心 . 拜AI古佛，修赛博禅心 今早八点，OpenAI 发布了他们的新产品 Deep Research在第一时间用上后，做出了此篇评测，先说
 结论：极强，但非常不稳定Deep Research 是一个比较高级的 Agent，在 ChatGPT 里的。

@@ -1,4 +1,4 @@
-# AI 搜索优化
+# 08-AI 搜索优化
 
 随着 ChatGPT、Perplexity、Google AI Overview 等 AI 搜索引擎的崛起，SEO 正在经历根本性变化。本章介绍如何让你的品牌在 AI 搜索时代被发现和推荐。
 

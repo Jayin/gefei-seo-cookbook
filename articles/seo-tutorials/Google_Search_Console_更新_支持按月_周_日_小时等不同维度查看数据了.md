@@ -1,4 +1,4 @@
-# Google Search Console 更新 支持按月 周 日 小时等不同维度查看数据了
+# 056-Google Search Console 更新 支持按月 周 日 小时等不同维度查看数据了
 
 Google Search Console 更新，支持按月、周、日、小时等不同维度查看数据了 大家好，我是哥飞。
 

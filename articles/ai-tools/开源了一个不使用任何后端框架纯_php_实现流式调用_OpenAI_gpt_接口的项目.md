@@ -1,4 +1,4 @@
-# 开源了一个不使用任何后端框架纯 php 实现流式调用 OpenAI gpt 接口的项目
+# 101-开源了一个不使用任何后端框架纯 php 实现流式调用 OpenAI gpt 接口的项目
 
 开源了一个不使用任何后端框架纯 php 实现流式调用 OpenAI gpt 接口的项目 php-openai-gpt-stream-chat-api-webui由 @qiayue 开源的 纯 PHP 实现 GPT 流式调用和前端实时打印 webui 。
 

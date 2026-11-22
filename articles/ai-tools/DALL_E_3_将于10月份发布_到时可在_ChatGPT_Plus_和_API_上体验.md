@@ -1,4 +1,4 @@
-# DALL E 3 将于10月份发布 到时可在 ChatGPT Plus 和 API 上体验
+# 052-DALL E 3 将于10月份发布 到时可在 ChatGPT Plus 和 API 上体验
 
 DALL·E 3 将于10月份发布，到时可在 ChatGPT Plus 和 API 上体验 大家好，我是哥飞。
 

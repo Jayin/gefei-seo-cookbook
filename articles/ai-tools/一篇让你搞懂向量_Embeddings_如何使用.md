@@ -1,4 +1,4 @@
-# 一篇让你搞懂向量 Embeddings 如何使用
+# 064-一篇让你搞懂向量 Embeddings 如何使用
 
 一篇让你搞懂向量 Embeddings 如何使用 大家好，我是哥飞。
 

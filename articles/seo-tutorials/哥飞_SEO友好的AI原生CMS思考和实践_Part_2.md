@@ -1,4 +1,4 @@
-# 哥飞 SEO友好的AI原生CMS思考和实践 Part 2
+# 092-哥飞 SEO友好的AI原生CMS思考和实践 Part 2
 
 哥飞：SEO友好的AI原生CMS思考和实践 Part 2 大家好，我是哥飞。
 

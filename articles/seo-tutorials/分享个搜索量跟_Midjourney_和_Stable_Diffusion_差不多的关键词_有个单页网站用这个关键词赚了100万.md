@@ -1,4 +1,4 @@
-# 分享个搜索量跟 Midjourney 和 Stable Diffusion 差不多的关键词 有个单页网站用这个关键词赚了100万
+# 022-分享个搜索量跟 Midjourney 和 Stable Diffusion 差不多的关键词 有个单页网站用这个关键词赚了100万
 
 分享个搜索量跟 Midjourney 和 Stable Diffusion 差不多的关键词，有个单页网站用这个关键词赚了100万 大家好，我是哥飞。
 

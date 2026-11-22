@@ -1,4 +1,4 @@
-# Midjourney V1 视频模型性价比超绝 泛化性优秀 
+# 117-Midjourney V1 视频模型性价比超绝 泛化性优秀
 
 Midjourney V1 视频模型性价比超绝，泛化性优秀！
 
